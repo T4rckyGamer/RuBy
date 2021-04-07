@@ -1,15 +1,15 @@
 #!/bin/bash 
 
-#─▄███▄──▄███▄─
-#▐████████████▌
-#─████████████─
-#──▀████████▀──
-#─────▀██▀─────
-#┊aian917 ‿ @TH3NK
-#┊@SA3ED ‿ @TH3SS
 
+#      ▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
+#      ▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
+#      ▇▇          ▇ @T20QT   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+#      ▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @T20QT
+#      ▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @Q2O10  ▇▄                 ▇▇                 ▇▇
+#      ▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source TH3BOSS BY @Q2O10
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
+ 
 RED='\033[0;31m'
 SMAY='\033[0;36m' 
 GREEN='\033[0;32m'
@@ -22,17 +22,16 @@ Version=`lsb_release -rs | cut -f1 -d"."`
 
 if [ "$Version" == "18" ];then
 echo -e "${GREEN}
-─▄███▄──▄███▄─
-▐████████████▌
-─████████████─
-──▀████████▀──
-─────▀██▀─────
-┊aian917 ‿ @TH3NK
-┊@SA3ED ‿ @TH3SS
- ---------------------------------------------------------------------${CNIL}"
+▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
+▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
+▇▇          ▇ @T20QT   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @T20QT
+▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @Q2O10  ▇▄                 ▇▇                 ▇▇
+▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source TH3BOSS BY @Q2O10
+----------------------------------------------------------------------${CNIL}"
 echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
 ${CNIL}";
-echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source aian917
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source Th3Boss 
 ${CNIL}";
 exit;
 fi
@@ -42,7 +41,7 @@ if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source aian917${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source TH3BOSS${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
@@ -57,31 +56,24 @@ echo -e "${RED}
 \n\n"
 lua ./inc/Run.lua
 exit;
-else
+fi
+
+
 TOKEN=`cat ./inc/Token.txt`
-BOTID=`echo $TOKEN | cut -f1 -d":"`
-Sudo=$(redis-cli get ${BOTID}:SUDO_ID:)
-if [[ $Sudo == "" ]]; then
-rm -fr ./inc/Token.txt
-lua ./inc/Run.lua
-exit;
-fi
-fi
+sudo chmod +x ./TG
 
-
-chmod +x ./TG  
-
-if [ "$1" == "R" ]; then
-while true; do
-sleep 1s
-sudo rm -fr ~/.telegram-cli
+if [ "$1" == "R" ] ; then
+while(true) do
+sudo killall -q ./TG
+sudo rm -fr ../.telegram-cli
 ./TG -s ./inc/Run.lua --bot=$TOKEN
 done
-else 
-if ! screen -list | grep -q "aian917"; then
-screen -S aian917 ./run R
 else
-screen -X -S aian917 quit
-screen -S aian917 ./run R
+
+if ! screen -list | grep -q "max"; then
+screen -S max ./run R
 fi
+screen -X -S max kill
+screen -S max ./run R
 fi
+
