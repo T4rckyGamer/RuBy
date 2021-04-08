@@ -370,71 +370,6 @@ if not msg.Admin then return "♦️*┇*هذا الامر يخص {الادمن,
 return whitelist(msg) 
 end
 
-if MsgText[1] == "قائمة الزق" then 
-if not msg.Rank then end
-return zzzkkk(msg) 
-end
-
-if MsgText[1] == "قائمة الدجاج" then 
-if not msg.Rank then end
-return zzkk(msg) 
-end
-
-if MsgText[1] == "قائمة الحمار" then 
-if not msg.Rank then end
-return hhaa(msg) 
-end
-
-if MsgText[1] == "قائمة القرود" then 
-if not msg.Rank then end
-return aahh(msg) 
-end
-
-if MsgText[1] == "قائمة البقر" then 
-if not msg.Rank then end
-return ggoo(msg) 
-end
-
-if MsgText[1] == "قائمة التيس" then 
-if not msg.Rank then end
-return yyoo(msg) 
-end
-
-if MsgText[1] == "قائمة الكلاب" then 
-if not msg.Rank then end
-return klaa(msg) 
-end
-
-if MsgText[1] == "قائمة الزواحف" then 
-if not msg.Rank then end
-return ssee(msg) 
-end
-
-if MsgText[1] == "قائمة الكيك" then 
-if not msg.Rank then end
-return kakaa(msg) 
-end
-
-if MsgText[1] == "قائمة البصل" then 
-if not msg.Rank then end
-return bass(msg) 
-end
-
-if MsgText[1] == "قائمة الذبان" then 
-if not msg.Rank then end
-return trrr(msg) 
-end
-
-if MsgText[1] == "قائمة الكليجه" then 
-if not msg.Rank then end
-return kll(msg) 
-end
-
-if MsgText[1] == "قائمة الثور" then 
-if not msg.Rank then end
-return vorr(msg) 
-end
-
 
 if MsgText[1] == "صلاحياته" then 
 if not msg.Director then return "♦️*│*هذا الامر يخص {المطور,المنشئ,المدير} فقط  \n💥" end
@@ -755,275 +690,6 @@ local MMEZEN = redis:scard(max..'whitelist:'..msg.chat_id_)
 redis:del(max..'whitelist:'..msg.chat_id_)
 
 return "🙋🏻‍♂┇أهلا عزيزي "..msg.TheRankCmd.." ⇓\n👨🏻‍⚖┇تــ✓ــم تنزيل ❴ "..Admins.." ❵ من الادمنيه\n👨🏻‍🔧┇تــ✓ــم تنزيل ❴ "..NumMDER.." ❵ من المدراء\n🙍🏻‍♂┇تــ✓ــم تنزيل ❴ "..MMEZEN.." ❵ من المميزين\n\n💠┇تــ✓ــم تـنـزيـل الـكـل بـنـجـاح\n✓" 
-end
-
-
-if MsgText[1] == "رفع زق" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zkzk"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل زق" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zkzkk"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع دجاجه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="dadaa"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل دجاجه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="dadaaa"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع حمار" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="motee"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل حمار" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="moteee"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع قرد" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="yyuu"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل قرد" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="yyuuu"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع بقره" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bakki"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل بقره" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bakkii"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع تيس" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="hamee"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل تيس" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="hamee"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع كلب" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kalb"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل كلب" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kalbb"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع زاحف" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zaahf"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل زاحف" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zaahff"})
-end
-return false
-end
-
-if MsgText[1] == "رفع كيكه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkaak"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل كيكه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkaakk"})
-end
-return false
-end
-
-if MsgText[1] == "رفع بصله" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bbaa"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل بصله" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bbaaa"})
-end
-return false
-end
-
-if MsgText[1] == "رفع ذبانه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="ttaa"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل ذبانه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="ttaaa"})
-end
-return false
-end
-
-if MsgText[1] == "رفع كليجه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkw"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل كليجه" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkww"})
-end
-return false
-end
-
-
-if MsgText[1] == "رفع ثور" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="voo"})
-end
-end
-if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"🙋🏼‍♂️*╿* أهلا عزيزي "..msg.TheRankCmd.."\n📡*╽* اوامر التسليه معطله\n✓")
-end
-return false
-end
-if MsgText[1] == "تنزيل ثور" then
-if not msg.Rank then end
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="vooo"})
-end
-return false
 end
 
 
@@ -2100,11 +1766,14 @@ end
 if MsgText[1] == "صوره الترحيب" then
 local Photo_Weloame = redis:get(max..':WELCOME_BOT')
 if Photo_Weloame then
-sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[⚜╿اهلا انآ بوت آسـمـي ]]..redis:get(max..':NameBot:')..[[ ✓
-👨🏻‍✈️│آختصـآصـي حمـآيهہ‌‏ آلمـجمـوعآت
-📛╽مـن آلسـبآم وآلتوجيهہ‌‏ وآلتگرآر وآلخ...
+sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[💯¦ أنا بوت اسمي ]]..redis:get(max..':NameBot:')..[[ 🎖️
+💯¦ مـرحباً أنا بوت الماسه 🎖
+💰¦ إختصاصي حماية المجموعات وإدارتها .
+📛¦ أقوم بخدمة المجموعات التعليمية مجاناً .
+📛¦ أعمل بدون أخطاء بمميزات فريدة وخاصـة .
+🚸¦ فقط المطور يسـتطـيع تفعيل آلبوت. 
 
-🎭│مـعـرف الـمـطـور  » ]]..SUDO_USER:gsub([[\_]],'_')..[[ 🌿
+👨🏽‍🔧│مـعـرف الـمـطـور  » ]]..SUDO_USER:gsub([[\_]],'_')..[[ 
 ]])
 
 return false
@@ -2278,12 +1947,12 @@ end
 
 
 if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' then
-return '👨🏾‍🔧│ اصدار سورس ايما : *v'..version..'* \n📡'
+return '👨🏾‍🔧│ اصدار سورس ماس : *v'..version..'* \n📡'
 end
 
 if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس 🔂') then
 if not msg.SudoBase then return "♦️*│*هذا الامر يخص {المطور الاساسي} فقط  \n💥" end
-local GetVerison = https.request('https://raw.githubusercontent.com/al3nzii/EMA/master/GetVersion.txt') or 0
+local GetVerison = https.request('https://github.com/MasSource/MAS.github.io/GetVersion.txt') or 0
 if GetVerison > version then
 UpdateSourceStart = true
 sendMsg(msg.chat_id_,msg.id_,'🔛*│* يوجد تحديث جديد الان \n📡*│* جاري تنزيل وتثبيت التحديث  ...')
@@ -2345,11 +2014,15 @@ if not msg.SudoBase then return"♦️*│*هذا الامر يخص {المطو�
 return "💯 البوت شـغــال 🚀" 
 end
 
+if (MsgText[1]=="شغال") then
+return " نعــم 👌🏻💯"
+end
+
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n👨🏻‍💻│اهلن عزيزي المطور ايديك هوه ⏬\n\n🧟‍♂│"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس 📡" and msg.type == "pv" then
-local inline = {{{text="⚜│قناه السـورس ضـغـط هنا ",url="t.me/EMASource"}}}
-send_key(msg.sender_user_id_,'  [⚜│قناة سورس : ايما](t.me/EMASource)',nil,inline,msg.id_)
+local inline = {{{text="⚜│قناه السـورس ضـغـط هنا ",url="t.me/YaqotSa1"}}}
+send_key(msg.sender_user_id_,'  [⚜│قناة سورس : ياقوت](t.me/YaqotSa1)',nil,inline,msg.id_)
 return false
 end
 
@@ -2811,9 +2484,9 @@ return [[
 ⠀
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 
-⁦🙋🏻‍♂️⁩ | مطور السورس : @a_l3nzi
+⁦🙋🏻‍♂️⁩ | مطور السورس : @MASx92
 
-📡 | القناة الخاصة بالسورس : @EMASource
+📡 | القناة الخاصة بالسورس : @MasSource
 
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 
@@ -4168,316 +3841,10 @@ end
 
 if not Replay then
 
---================================{{  Reply Bot  }} ===================================
 
-local mrr = {
-"مرحبتين",
-"اهلا",
-}
-local amr = {
-"ياعمري♥️🙈",
-"ياقلبي♥️🙈",
-"ياحياتي♥️🙈",
-"نتيكن؟",
-}
-local nmf = {
-"فيه احد ماسكك؟",
-"نوم العافيه",
-"على فراشك يالله",
-"نوم الظالم عباده",
-}
-local nor = {
-" نورك",
-"اعرفك؟",
-"النور نورك",
-"ادري🌚-،",
-}
-local smx = {
-"صباح النور",
-"صباحنا انت/ي",
-"اللحين اقدر اروق",
-}
-local msx = {
-"مساء النور",
-"مسائي انت/ي",
-"اللحين اقدر اروق",
-}
-local nm = {
-"دجاج ماحولك احد🌚",
-"شدخلك",
-"ايه",
-"ازعجتنا",
-"انت ماتنام؟ ",
-}
-local wk1 = {
-"نايم/ه",
-"وش عندك ؟",
-"هاجرت",
-"امرني",
-"وش دخلك",
-"بقلبك",
-}
-local wk = {
-"نايمين",
-"وش عندك ",
-"هاجرنا",
-"امرني",
-"وش دخلك",
-"بقلبك",
-}
-local su = {
- "عيوني",
-"امرني ينبضي",
-"عيون ["..Bot_Name.."] ",
-"لبيه يروحي"}
-local ss97 = {
-"لعنه شعندك","هاه",
-"امر شتبي","لبيه","هلا",
-"عيوني",
-"عيون ["..Bot_Name.."] ",
-"امرني قلبي لك ", 
-"روح ["..Bot_Name.."] ",
-}
-local ns = {
-"أسمي ["..Bot_Name.."] يقلبي",
-"نادني ب ["..Bot_Name.."] يتبن",
-"مكتوب اسمي ["..Bot_Name.."] متعرف تقرا ",
-"بوت بعينك يتبن ",
-"اسمي ["..Bot_Name.."] ",
-"انت البوت ",
- "شعندك تناديني بوت ",
-}
-local na = {
-"انتحر",
-"الله يرزقك بسالفه",
-"زق سالفه",
-"هب لنا سالفه",
-}
-local nb = {
-"امححات",
-"محح",
-"صممها",
-"يع",
-"امممختفو",
-}
-local nf = {
-"مو كثري",
-"نفس الشعور",
-"ونا اكثر",
- "تقلع",
-}
-local nl = {
-"اطلق منجا",
-"ارحب نورت",
-"يع وش جابك",
-}
-local np = {
-"ينباس الهاي",
-"هايات",
-"جبر مو هاي",
-}
-local sh = {
-"ونا اكثر يروحي",
-"احبنك",
-"اعشقنك",
-"اموت فيك يروحي",
-}
-local lovm = {
-"اكرهك",
-"اعشقكك",
-"احبنك",
-"اهيم بك",
-"لاتحتك",
-"يع جبت لي غثيان",
-"وانا احبك",
-}
-local bay = {
-"بايات",
-"انتبهلك",
-"انتبه لك يقلبي",
-"سردب",
-"فكه",
-"طس",
-"مذلفه",
-}
-local cat = {
-"-› المجموعه مفعله من قبل يالطيب!",
-"-› نسبه الندم عندك للي وثقت فيهم ؟",
-"-›  يومك ضاع على؟",
-"-› أكثر تغيير ترغب أن تغيّره في نفسك؟",
-"-›  كم مره حبيت؟",
-"-›  اعترف باي حاجه ؟",
-"-›  تتابع انمي؟ إذا نعم ما أفضل انمي شاهدته",
-"-› وش اسم اول شخص تعرفت عليه فالتلقرام ؟",
-"-›  تحب تحتفظ بالذكريات ؟",
-"-›  تاريخ ميلادك؟",
-"-›  عبّر عن مودك بصوره ؟",
-"-›  كلمتك التسليكيه ؟",
-"-›  مغني تلاحظ أن صوته يعجب الجميع إلا أنت؟",
-"-›  يوم لا يمكنك نسيانه؟",
-"-›  تصرُّف ماتتحمله؟",
-"-›  كل شيء يهون الا ؟",
-"-›  وش الحب بنظرك؟",
-"-›  اشياء نفسك تجربها؟",
-"-›  تحب تحتفظ بالذكريات ؟",
-"-›  ردة فعلك لمن يتجاهلك بالرد متعمد؟",
-"-› جربت شعور احد يحبك بس انت مو قادر تحبه؟",
-"-›  موقف محرج ماتنساه ؟",
-"-›  عمرك انتقمت من أحد ؟!",
-"-›  وش أخر شي ضيعته؟",
-"-›  كم نسبة البيتوتية في شخصيتك؟",
-"-›  مغني تلاحظ أن صوته يعجب الجميع إلا أنت؟",
-"-› ما هي طريقتك في الحصول على الراحة النفسية؟",
-"-›  كتاب أو رواية تقرأها هذه الأيام؟",
-"-› الفلوس او الحب ؟",
-"-›  أجمل شيء حصل معك خلال هذا الاسبوع ؟",
-"-›  كم تحتاج من وقت لتثق بشخص؟",
-}
 local Text = msg.text
 local Text2 = Text:match("^"..Bot_Name.." (%d+)$")
 
-if msg.SudoUser and Text == Bot_Name and not Text2 then
-return sendMsg(msg.chat_id_,msg.id_,su[math.random(#su)])
-elseif not msg.SudoUser and Text== Bot_Name and not Text2 then  
-return sendMsg(msg.chat_id_,msg.id_,ss97[math.random(#ss97)])
-elseif Text:match("^قول (.*)$") then
-if utf8.len(Text:match("^قول (.*)$")) > 500 then 
-return sendMsg(msg.chat_id_,msg.id_,"📛| ما اكدر اقول اكثر من 500 حرف 🙌🏾")
-end
-local callback_Text = FlterName(Text:match("^قول (.*)$"),50)
-if callback_Text and callback_Text == 'الاسم سبام 📛' then
-return sendMsg(msg.chat_id_,msg.id_,"📛| للاسف النص هذا مخالف ")
-else
-return sendMsg(msg.chat_id_,0,callback_Text) 
-end
-elseif Text:match("^"..Bot_Name.." اتفل (.*)$") then
-if msg.reply_id then
-sendMsg(msg.chat_id_,msg.id_,'اوك سيدي 🌝🍃')
-sendMsg(msg.chat_id_,msg.reply_id,'لك شنو هاذه ويهك ختفوووووووووو💦💦️️ بنص ويهك 😹')
-else 
-return sendMsg(msg.chat_id_,msg.id_,"  🕵🏻 وينه بله سويله رد 🙄")
-end
-elseif msg.SudoUser and Text=="احبك" then 
-return sendMsg(msg.chat_id_,msg.id_,sh[math.random(#sh)])
-elseif Text=="بوت" then 
-return sendMsg(msg.chat_id_,msg.id_,ns[math.random(#ns)])
-elseif Text=="طفش" then 
-return sendMsg(msg.chat_id_,msg.id_,na[math.random(#na)])
-elseif Text=="مح" then 
-return sendMsg(msg.chat_id_,msg.id_,nb[math.random(#nb)])
-elseif Text=="اكرهك" then 
-return sendMsg(msg.chat_id_,msg.id_,nf[math.random(#nf)])
-elseif Text=="كت تويت" then 
-return sendMsg(msg.chat_id_,msg.id_,cat[math.random(#cat)])
-elseif Text=="جيت" then 
-return sendMsg(msg.chat_id_,msg.id_,nl[math.random(#nl)])
-elseif Text=="هاي" then 
-return sendMsg(msg.chat_id_,msg.id_,np[math.random(#np)])
-elseif Text=="باي" then 
-return sendMsg(msg.chat_id_,msg.id_,bay[math.random(#bay)])
-elseif Text=="وينكم" then 
-return sendMsg(msg.chat_id_,msg.id_,wk[math.random(#wk)])
-elseif Text=="وينكم؟" then 
-return sendMsg(msg.chat_id_,msg.id_,wk[math.random(#wk)])
-elseif Text=="وينك؟" then 
-return sendMsg(msg.chat_id_,msg.id_,wk1[math.random(#wk1)])
-elseif Text=="وينك" then 
-return sendMsg(msg.chat_id_,msg.id_,wk1[math.random(#wk1)])
-elseif Text=="نايمين" then 
-return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="نايمين؟" then 
-return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="نمتو" then 
-return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="نمتو؟" then 
-return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="مساء الخير" then 
-return sendMsg(msg.chat_id_,msg.id_,msx[math.random(#msx)])
-elseif Text=="صباح الخير" then 
-return sendMsg(msg.chat_id_,msg.id_,smx[math.random(#smx)])
-elseif Text=="منور" then 
-return sendMsg(msg.chat_id_,msg.id_,nor[math.random(#nor)])
-elseif Text=="منوره" then 
-return sendMsg(msg.chat_id_,msg.id_,nor[math.random(#nor)])
-elseif Text=="بنام" then 
-return sendMsg(msg.chat_id_,msg.id_,nmf[math.random(#nmf)])
-elseif Text=="ياحياتي" then 
-return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="ياعمري" then 
-return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="ياقلبي" then 
-return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="اعشقك" then 
-return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="مرحبا" then 
-return sendMsg(msg.chat_id_,msg.id_,mrr[math.random(#mrr)])
-elseif msg.SudoUser and Text== "تحبني" or Text=="حبك" then 
-return sendMsg(msg.chat_id_,msg.id_,"اعشقنك ")
-elseif not msg.SudoUser and Text== "احبك" or Text=="حبك" then 
-return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
-elseif not msg.SudoUser and Text== "تحبني" then
-return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
-elseif Text== "تف" then return sendMsg(msg.chat_id_,msg.id_,"تف ؏ وجهك الخايس.")
-elseif Text== "اخباركم؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام اخبارك انت/ي")
-elseif Text== "شلونكم" then return sendMsg(msg.chat_id_,msg.id_,"تمام شلونك انت/ي")
-elseif Text== "شلونكم؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام شلونك انت/ي")
-elseif Text== "كيفكم" then return sendMsg(msg.chat_id_,msg.id_,"تمام كيفك انت/ي")
-elseif Text== "كيفكم؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام كيفك انت/ي")
-elseif Text== "شلونك" then return sendMsg(msg.chat_id_,msg.id_,"تمام شلونك انت/ي")
-elseif Text== "شلونك؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام شلونك انت/ي")
-elseif Text== "كيفك" then return sendMsg(msg.chat_id_,msg.id_,"تمام كيفك انت/ي")
-elseif Text== "كيفك؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام كيفك انت/ي")
-elseif Text== "اخبارك" then return sendMsg(msg.chat_id_,msg.id_,"تمام اخبارك انت/ي")
-elseif Text== "اخبارك؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام اخبارك انت/ي")
-elseif Text== "اخباركم" then return sendMsg(msg.chat_id_,msg.id_,"تمام اخبارك انت/ي")
-elseif Text== "كيف حالكم" then return sendMsg(msg.chat_id_,msg.id_,"بخير حمدلله وانت/ي ")
-elseif Text== "اخبارك؟" then return sendMsg(msg.chat_id_,msg.id_,"تمام اخبارك انت/ي")
-elseif Text== "كيف حالك" then return sendMsg(msg.chat_id_,msg.id_,"بخير حمدلله وانت/ي ")
-elseif Text== "كيف حالكم؟" then return sendMsg(msg.chat_id_,msg.id_,"بخير حمدلله وانت/ي ")
-elseif Text== "كيف حالك؟" then return sendMsg(msg.chat_id_,msg.id_,"بخير حمدلله وانت/ي ")
-elseif Text== "كفو" then return sendMsg(msg.chat_id_,msg.id_,"كفوك الطيب😎")
-elseif Text== "شكو" then return sendMsg(msg.chat_id_,msg.id_,"شكو ماكو🤪")
-elseif Text== "برب" then return sendMsg(msg.chat_id_,msg.id_,"تيت بنشتاق للك لاتطول/ين♥️")
-elseif Text== "باك" then return sendMsg(msg.chat_id_,msg.id_,"ولكم باك من اليوم منتظرينك🙈")
-elseif Text== "اشتقت للك" then return sendMsg(msg.chat_id_,msg.id_,"اشتقت لك اكثر♥️")
-elseif Text== "اشتقتلك" then return sendMsg(msg.chat_id_,msg.id_,"اشتقتلك اكثر♥️")
-elseif Text== "امزح" then return sendMsg(msg.chat_id_,msg.id_,"لاتعيدها😒")
-elseif Text== "اشفين" then return sendMsg(msg.chat_id_,msg.id_,"لاتعيدها😒")
-elseif Text== "اشفين اشفين" then return sendMsg(msg.chat_id_,msg.id_,"لاتعيدها😒")
-elseif Text== "اسفين" then return sendMsg(msg.chat_id_,msg.id_,"لاتعيدها😒")
-elseif Text== "اسفين اسفين" then return sendMsg(msg.chat_id_,msg.id_,"لاتعيدها😒")
-elseif Text== "🤪" then return sendMsg(msg.chat_id_,msg.id_,"دخل لسانك عيب😒")
-elseif Text== "😜" then return sendMsg(msg.chat_id_,msg.id_,"دخل لسانك عيب😒")
-elseif Text== "جب" then return sendMsg(msg.chat_id_,msg.id_,"جب انت/ي ياللي ماتستحي/ن")
-elseif Text== "تشب" then return sendMsg(msg.chat_id_,msg.id_,"تشب انت/ي ياللي ماتستحي/ن")
-elseif Text== "شب" then return sendMsg(msg.chat_id_,msg.id_,"شب انت/ي ياللي ماتستحي/ن")
-elseif Text== "الزبده" then return sendMsg(msg.chat_id_,msg.id_,"اسلم")
-elseif Text== "المهم" then return sendMsg(msg.chat_id_,msg.id_,"عطني الزبده؟")
-elseif Text== "كلخرا" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كلزق" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كل خرا" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كل زق" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كليخرا" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كلي خرا" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كليزق" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "كلي زق" then return sendMsg(msg.chat_id_,msg.id_,"عيب عليك منت/ي متربي/ه")
-elseif Text== "تصبحون على خير" then return sendMsg(msg.chat_id_,msg.id_,"تلقى الخير")
-elseif Text== "تمسون على خير" then return sendMsg(msg.chat_id_,msg.id_,"تلقى الخير")
-elseif Text== "لبيه" then return sendMsg(msg.chat_id_,msg.id_,"لبيت/ي في مكه ")
-elseif Text== "ولكم" then return sendMsg(msg.chat_id_,msg.id_,"يسلمو♥️🙈")
-elseif Text== "يالبيه" then return sendMsg(msg.chat_id_,msg.id_,"يالبيه انت/ي والله😍")
-elseif Text== "يا لبيه" then return sendMsg(msg.chat_id_,msg.id_,"يالبيه انت/ي والله😍")
-elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
-return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام")
-elseif Text== "مساعدة"  then return sendMsg(msg.chat_id_,msg.id_,"لعرض قائمة المساعدة اكتب الاوامر 🌚❤️")
-elseif Text== "رفع لقلبي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم رفع العضو داخل قلبك✔️\n🛠┇تمت ترقيته بنجاح 😻😹👋🏻\n✓️")
-elseif Text== "رفع زوجتي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم رفع العضو زوجتك بنجاح✔️\nالآن يمكنكم أخذ راحتكم🤤??\n✓️")
-elseif Text== "طلاق" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم طلاق العضو بنجاح✔️\n🛠┇الآن هو مطلق يله انقلع برا 😹💔\n✓️")
-elseif Text== "تنزيل من قلبي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم تنزيل من داخل قلبك✔️\n🛠┇تمت ازالته من قائمة القلوب 😹💔\n✓️")
-elseif Text== "تنزيل زوجتي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم تنزيل الرمه زوجتك بنجاح✔️\nالآن انتم مفترقان☹️💔\n✓️")
-elseif Text== "زواج" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم زواجكم الاثنين بنجاح✔️\n🛠┇الآن يمكنكم أخذ راحتكم🤤😉\n✓️")
-elseif Text== "رفع زوجي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم رفع العضو زوجك بنجاح✔️\nالآن يمكنكم أخذ راحتكم🤤😉\n✓️")
-elseif Text== "تنزيل زوجي" then return sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂┇اهــلا عزيزي\n🎫┇تم تنزيل الرم زوجك بنجاح✔️\nالآن انتم مفترقان☹️💔\n✓️")
 
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
@@ -4492,30 +3859,9 @@ return sendMsg(msg.chat_id_,msg.id_,[[
 🚸┇[اضغط هنا لـحـذف الـحـسـاب](https://telegram.org/deactivate)
 ]] )
 --=====================================
-elseif Text== "انا مين" or Text== "اني منو" or Text=="انا منو" then
-if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"انت حبيبي المطور")
-elseif msg.Creator then 
-return sendMsg(msg.chat_id_,msg.id_,"انت قلبي المنشئ")
-elseif msg.Director then 
-return sendMsg(msg.chat_id_,msg.id_,"مدير ولاتستاهل")
-elseif msg.Admin then 
-return sendMsg(msg.chat_id_,msg.id_,"أدمن ويخب عليك")
-else 
-return sendMsg(msg.chat_id_,msg.id_,"عضو فقط")
-end 
-end
 
 
 
-
-end 
-
-
-end
-
-
-------------------------------{ End Replay Send }------------------------
 
 ------------------------------{ Start Checking CheckExpire }------------------------
 if not redis:sismember(max..'kara','Start') then
@@ -4669,32 +4015,6 @@ max = {
 '^(تنزيل ادمن)$',
 '^(تنزيل ادمن) (@[%a%d_]+)$',
 '^(تنزيل ادمن) (%d+)$', 
-"^(رفع ثور)$",
-"^(تنزيل ثور)$",
-"^(رفع كيكه)$",
-"^(تنزيل كيكه)$",
-"^(رفع بصله)$",
-"^(تنزيل بصله)$",
-"^(رفع ذبانه)$",
-"^(تنزيل ذبانه)$",
-"^(رفع كليجه)$",
-"^(تنزيل كليجه)$",
-"^(رفع زق)$",
-"^(تنزيل زق)$",
-"^(رفع دجاجه)$",
-"^(تنزيل دجاجه)$",
-"^(رفع حمار)$",
-"^(تنزيل حمار)$",
-"^(رفع قرد)$",
-"^(تنزيل قرد)$",
-"^(رفع بقره)$",
-"^(تنزيل بقره)$",
-"^(رفع تيس)$",
-"^(تنزيل تيس)$",
-"^(رفع كلب)$",
-"^(تنزيل كلب)$",
-"^(رفع زاحف)$",
-"^(تنزيل زاحف)$",
 '^(رفع المدير)$',
 '^(رفع مدير)$', 
 '^(رفع مدير) (@[%a%d_]+)$',
@@ -4914,7 +4234,8 @@ max = {
 "^(الاشتراك الاجباري ⚠️)$", 
 "^(احظرني)$", 
 "^(اطردني)$", 
-"^(جهاتي)$", 
+"^(جهاتي)$",
+"^(شغال)$", 
 
 
 
