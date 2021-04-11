@@ -1,12 +1,12 @@
-#!/bin/bash 
+#!/usr/bin/env bash 
 
 
 #      ▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
 #      ▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
-#      ▇▇          ▇ @a_l3nzi   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
-#      ▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @a_l3nzi
-#      ▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @a_l3nzi  ▇▄                 ▇▇                 ▇▇
-#      ▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source TH3max BY @a_l3nzi
+#      ▇▇          ▇ @XB_0B   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+#      ▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @XB_0B
+#      ▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @XB_0B  ▇▄                 ▇▇                 ▇▇
+#      ▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source ZORO BY @XB_0B
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
  
@@ -24,14 +24,15 @@ if [ "$Version" == "18" ];then
 echo -e "${GREEN}
 ▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
 ▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
-▇▇          ▇ @a_l3nzi   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
-▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @a_l3nzi
-▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @a_l3nzi  ▇▄                 ▇▇                 ▇▇
-▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source al3nzi BY @a_l3nzi
+▇▇          ▇ @XB_0B   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @XB_0B
+▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @XB_0B  ▇▄                 ▇▇                 ▇▇
+▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source ZORO BY @XB
+
 ----------------------------------------------------------------------${CNIL}"
 echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
 ${CNIL}";
-echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source Th3max 
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source ZORO 
 ${CNIL}";
 exit;
 fi
@@ -41,7 +42,7 @@ if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source TH3max${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source ZORO${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
@@ -64,16 +65,16 @@ sudo chmod +x ./TG
 
 if [ "$1" == "R" ] ; then
 while(true) do
-sudo killall -q ./TG
+killall -q ./TG
 sudo rm -fr ../.telegram-cli
-./TG -s ./inc/Run.lua --bot=$TOKEN
+./TG -s inc/Run.lua --bot=$TOKEN
 done
 else
 
-if ! screen -list | grep -q "FHAIWIH"; then
-screen -S FHAIWIH ./run R
+if ! screen -list | grep -q "ZORO"; then
+screen -S ZORO ./run R
 fi
-screen -X -S FHAIWIH kill
-screen -S FHAIWIH ./run R
+screen -S ZORO -X kill
+screen -S ZORO ./run R
 fi
 
