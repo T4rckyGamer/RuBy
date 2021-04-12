@@ -1662,9 +1662,12 @@ end
 if MsgText[1] == "صوره الترحيب" then
 local Photo_Weloame = redis:get(clay..':WELCOME_BOT')
 if Photo_Weloame then
-sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[• اهلا انا بوت]]..redis:get(clay..':NameBot:')..[[ .
-• اختصاصي حماية‌‏ المجموعات
-• مـن السبام والتوجيه‌‏ والتكرار والخ...
+sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[ 💯¦ مـرحباً أنا بوت ياقوت 🎖]]..redis:get(clay..':NameBot:')..[[ .
+💰¦ آختصـآصـي حمـآيهہ‌‏ آلمـجمـوعآت
+📛¦ مـن آلسـبآم وآلتوجيهہ‌‏ وآلتگرآر وآلخ...
+🚸¦ فقط آلمـطـور يسـتطـيع تفعيل آلبوت
+⚖️¦ مـعرف آلمـطـور  : @PROTECTmnbot
+👨🏽‍🔧
 
 • مـعـرف الـمـطـور  » ]]..SUDO_USER:gsub([[\_]],'_')..[[ .
 ]])
