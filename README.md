@@ -1,2 +1,0 @@
-# neyzk
-Neyzk
