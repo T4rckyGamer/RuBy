@@ -1,12 +1,14 @@
 #!/bin/bash 
 
-#─▄███▄──▄███▄─
-#▐████████████▌
-#─████████████─
-#──▀████████▀──
-#─────▀██▀─────
-#┊NEZAK ‿ @TH3NEK
-#┊@AAH_MD ‿ @TH3SS
+#  ▄█    █▄     ▄████████    ▄████████    ▄████████  Channel : @VeerCli 
+#  ███    ███   ███    ███   ███    ███   ███    ███ 
+#  ███    ███   ███    █▀    ███    █▀    ███    ███ 
+#  ███    ███  ▄███▄▄▄      ▄███▄▄▄      ▄███▄▄▄▄██▀  Bot : @VeerCliBot
+#  ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
+#  ███    ███   ███    █▄    ███    █▄  ▀███████████ Dev : @RSAIED
+#  ███    ███   ███    ███   ███    ███   ███    ███ 
+#  ▀██████▀    ██████████   ██████████   ███    ███  By Source Veer
+
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
 RED='\033[0;31m'
@@ -19,35 +21,18 @@ WHITEC='\033[01;91m'
 CNIL='\033[0m'
 Version=`lsb_release -rs | cut -f1 -d"."`
 
-if [ "$Version" == "18" ];then
-echo -e "${GREEN}
-─▄███▄──▄███▄─
-▐████████████▌
-─████████████─
-──▀████████▀──
-─────▀██▀─────
-┊NEZAK ‿ @TH3NEK
-تم تطوير وبرمجة السورس من قبل علي محمد
-┊@AAH_MD ‿ @TH3SS
- ---------------------------------------------------------------------${CNIL}"
-echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
-${CNIL}";
-echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source Th3Neyzk 
-${CNIL}";
-exit;
-fi
-
 
 if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source TH3NEYZK${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source VEER${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
 exit;
 fi
+
 
 if [ ! -f "./inc/Token.txt" ]; then
 echo -e "${RED}
@@ -68,31 +53,20 @@ exit;
 fi
 fi
 
-
 chmod +x ./TG  
-Loops=0
+
 if [ "$1" == "R" ]; then
-while [[ $Loops -le 5 ]]; do
+while true; do
 sleep 1s
 sudo rm -fr ~/.telegram-cli
 ./TG -s ./inc/Run.lua --bot=$TOKEN
-let Plas=Loops+1
-redis-cli SETEX $TOKEN 3 $Plas
-Loops=`redis-cli GET ${TOKEN}`
-echo $Loops
-if [[ $Loops == 5 ]]; then
-curl "https://api.telegram.org/bot${TOKEN}/sendmessage" -F "chat_id=${Sudo}" -F "text=THESOURCE-Reloaded-${COUNTER}-times" &>/dev/null
-screen -X -S neyzk quit
-fi
 done
 else 
-if [[ $Loops == 0 ]]; then
-if ! screen -list | grep -q "neyzk"; then
-screen -S neyzk ./run R
+BOTIDS=`echo $TOKEN | cut -f1 -d":"`
+if ! screen -list | grep -q "veer_$BOTIDS"; then
+screen -S veer_$BOTIDS ./run R
 else
-screen -X -S neyzk quit
-screen -S neyzk ./run R
+screen -X -S veer_$BOTIDS quit
+screen -S veer_$BOTIDS ./run R
 fi
 fi
-fi
-
