@@ -3128,6 +3128,21 @@ if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' the
 return '👨🏾‍🔧¦ اصدار سورس الزعيم : *v'..version..'* \n📡'
 end
 
+if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™') then
+if not msg.SudoBase then return "📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
+local GetVerison = https.request('https://rubys.github.io/GetVersion.txt') or "0"
+GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
+if GetVerison > version then
+UpdateSourceStart = true
+sendMsg(msg.chat_id_,msg.id_,'🔛*¦* يوجد تحديث جديد الان \n📡*¦* جاري تنزيل وتثبيت التحديث  ...')
+redis:set(boss..":VERSION",GetVerison)
+return false
+else
+return "🔖¦ الاصدار الحالي : *v"..version.."* \n👨🏾‍🔧*¦* لديـك احدث اصدار \n📦"
+end
+return false
+end
+
 if MsgText[1] == 'نسخه احتياطيه للمجموعات' then
 if not msg.SudoBase then return"📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
 return buck_up_groups(msg)
