@@ -1,13 +1,13 @@
 #!/bin/bash 
 
-#  ▄█    █▄     ▄████████    ▄████████    ▄████████  Channel : @VeerCli 
-#  ███    ███   ███    ███   ███    ███   ███    ███ 
-#  ███    ███   ███    █▀    ███    █▀    ███    ███ 
-#  ███    ███  ▄███▄▄▄      ▄███▄▄▄      ▄███▄▄▄▄██▀  Bot : @VeerCliBot
-#  ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
-#  ███    ███   ███    █▄    ███    █▄  ▀███████████ Dev : @RSAIED
-#  ███    ███   ███    ███   ███    ███   ███    ███ 
-#  ▀██████▀    ██████████   ██████████   ███    ███  By Source Veer
+#    ▀█████████▄   ▄██████▄     ▄████████    ▄████████
+#      ███    ███ ███    ███   ███    ███   ███    ███
+#      ███    ███ ███    ███   ███    █▀    ███    █▀
+#     ▄███▄▄▄██▀  ███    ███   ███          ███
+#    ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS
+#      ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
+#      ███    ███ ███    ███    ▄█    ███    ▄█    ███
+#    ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS
 
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
@@ -26,7 +26,7 @@ if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source VEER${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source TH3BOSS${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
@@ -53,20 +53,25 @@ exit;
 fi
 fi
 
+UserBot=$(redis-cli get ${BOTID}:UserNameBot:)
+
+echo "$Sudo"
+echo "$UserBot"
+
 chmod +x ./TG  
 
 if [ "$1" == "R" ]; then
 while true; do
 sleep 1s
+rm -fr ./BOSS
 sudo rm -fr ~/.telegram-cli
 ./TG -s ./inc/Run.lua --bot=$TOKEN
 done
 else 
-BOTIDS=`echo $TOKEN | cut -f1 -d":"`
-if ! screen -list | grep -q "veer_$BOTIDS"; then
-screen -S veer_$BOTIDS ./run R
+if ! screen -list | grep -q "$UserBot"; then
+screen -S "$UserBot" ./run R
 else
-screen -X -S veer_$BOTIDS quit
-screen -S veer_$BOTIDS ./run R
+screen -X -S "$UserBot" quit
+screen -S "$UserBot" ./run R
 fi
 fi

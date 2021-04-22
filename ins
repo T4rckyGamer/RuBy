@@ -1,14 +1,13 @@
 #!/bin/bash 
 
-
-#  ▄█    █▄     ▄████████    ▄████████    ▄████████  Channel : @VeerCli 
-#  ███    ███   ███    ███   ███    ███   ███    ███ 
-#  ███    ███   ███    █▀    ███    █▀    ███    ███ 
-#  ███    ███  ▄███▄▄▄      ▄███▄▄▄      ▄███▄▄▄▄██▀  Bot : @VeerCliBot
-#  ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
-#  ███    ███   ███    █▄    ███    █▄  ▀███████████ Dev : @RSAIED
-#  ███    ███   ███    ███   ███    ███   ███    ███ 
-#  ▀██████▀    ██████████   ██████████   ███    ███  By Source Veer
+#    ▀█████████▄   ▄██████▄     ▄████████    ▄████████
+#      ███    ███ ███    ███   ███    ███   ███    ███
+#      ███    ███ ███    ███   ███    █▀    ███    █▀
+#     ▄███▄▄▄██▀  ███    ███   ███          ███
+#    ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS
+#      ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
+#      ███    ███ ███    ███    ▄█    ███    ▄█    ███
+#    ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS
 
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
@@ -25,14 +24,14 @@ CNIL='\033[0m'
 Version=`lsb_release -rs | cut -f1 -d"."`
 
 echo -e "${SMAY}\n"
-echo -e " ▄█    █▄     ▄████████    ▄████████    ▄████████  Channel : @VeerCli "
-echo -e " ███    ███   ███    ███   ███    ███   ███    ███ "
-echo -e " ███    ███   ███    █▀    ███    █▀    ███    ███ "
-echo -e " ███    ███  ▄███▄▄▄      ▄███▄▄▄      ▄███▄▄▄▄██▀  Bot : @VeerCliBot"
-echo -e " ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   "
-echo -e " ███    ███   ███    █▄    ███    █▄  ▀███████████ Dev : @RSAIED"
-echo -e " ███    ███   ███    ███   ███    ███   ███    ███ "
-echo -e " ▀██████▀    ██████████   ██████████   ███    ███  By Source Veer"
+echo -e " ▀█████████▄   ▄██████▄     ▄████████    ▄████████"
+echo -e "   ███    ███ ███    ███   ███    ███   ███    ███"
+echo -e "   ███    ███ ███    ███   ███    █▀    ███    █▀"
+echo -e "  ▄███▄▄▄██▀  ███    ███   ███          ███"
+echo -e " ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS"
+echo -e "   ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM"
+echo -e "   ███    ███ ███    ███    ▄█    ███    ▄█    ███"
+echo -e " ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS"
 echo -e " ---------------------------------------------------------------------"
 echo -e "${CNIL}"
 
@@ -41,7 +40,7 @@ memory_free=`awk '/^Mem/ {print $4}' <(free -m)`
 if [ "$memory_free" -le 60 ]; then
 echo -e "${RED}¦
 ¦ CAUTION:${WHITEC} Your RAM size is less than 60MB.
-¦ NOW you can not install the SOURCE VEER. \n
+¦ NOW you can not install the SOURCE TH3BOSS. \n
 ¦${WHITB}¦ YOUR RAM FREE SIZE IS : ${SMAY}${memory_free}MB${CNIL}"
 exit ;
 fi
@@ -52,11 +51,11 @@ if [ "${PKG_OK}" == "installed" ]; then
 if [ "$1" == "-R" ] ; then
 GET_INSTALL="NO"
 else
-GET_INSTALL=$(redis-cli get VEER_INSTALL)
+GET_INSTALL=$(redis-cli get TH3BOSS_INSTALL)
 fi
 if [ "${GET_INSTALL}" == "Yes" ]; then
 echo -e "
-${SMAY}>> ${LSAMAY}Source Veer${SMAY} is Already Installed ^_^ .\n${CNIL}"
+${SMAY}>> ${LSAMAY}Source TH3BOSS${SMAY} is Already Installed ^_^ .\n${CNIL}"
 sudo chmod +x ./run
 sudo chmod +x ./TG
 sudo ./run
@@ -71,7 +70,7 @@ echo -e "\x1B[01;90m\n¦ software-properties-common installing ... \n\x1B[0m"
 sudo apt-get install software-properties-common -y
 echo -e "\x1B[01;90m\n¦ ubuntu-toolchain installing ...\n \x1B[0m"
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-# BY _ [ SAIED >> @SA3ED | CH >> @VeerCli ]
+# BY _ [ >> @OMMMM | MOHAMED HISHAM >> @TH3BOSS ]
 echo -e "\x1B[01;90m\n¦ install Modiles Pkgs ... \n\n\x1B[0m"
 
 sudo apt-get install libreadline-dev -y libconfig-dev -y libssl-dev -y lua5.2 -y liblua5.2-dev -y lua-socket -y lua-sec -y lua-expat -y libevent-dev -y make unzip git redis-server autoconf g++ -y libjansson-dev -y libpython-dev -y expat libexpat1-dev -y curl -y htop -y wget -y
@@ -115,12 +114,12 @@ echo -e "\x1B[01;90m\n¦ Remove luarocks ... \n\x1B[0m"
 cd .. ;sudo rm -fr ./luarocks*
 echo -e "${WHITB}\n¦ Convert TimeZone To Asia/Baghdad  ... \n${CNIL}"
 sudo timedatectl set-timezone Asia/Baghdad
-cd && cd VEER && sudo find . -type f -print0 | xargs -0 chmod +x
+cd && cd BOSS && sudo find . -type f -print0 | xargs -0 chmod +x
 echo -e "\n
-${SMAY}>> Installation ${LSAMAY}Source Veer ${SMAY} Completed ^_^ .\n
+${SMAY}>> Installation ${LSAMAY}Source TH3BOSS ${SMAY} Completed ^_^ .\n
 Now I Have Information For Your Bot  \n
 1- Enter Token Your Bot .
 2- Enter Your UserName Sudo .
-3- And End Press Enter To Run Source Veer .\n\n
+3- And End Press Enter To Run Source TH3BOSS .\n\n
 ${RED}Note:${Yellow} Send \"/start\"${SMAY} To Your Bot For Show All Commands.${CNIL}"
 sudo ./run
