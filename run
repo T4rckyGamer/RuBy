@@ -1,13 +1,12 @@
 #!/bin/bash 
 
-#    ▀█████████▄   ▄██████▄     ▄████████    ▄████████
-#      ███    ███ ███    ███   ███    ███   ███    ███
-#      ███    ███ ███    ███   ███    █▀    ███    █▀
-#     ▄███▄▄▄██▀  ███    ███   ███          ███
-#    ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS
-#      ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
-#      ███    ███ ███    ███    ▄█    ███    ▄█    ███
-#    ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS
+#─▄███▄──▄███▄─
+#▐████████████▌
+#─████████████─
+#──▀████████▀──
+#─────▀██▀─────
+#┊NIZK ‿ @TH3NK
+#┊@SA3ED ‿ @TH3SS
 
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
@@ -21,18 +20,34 @@ WHITEC='\033[01;91m'
 CNIL='\033[0m'
 Version=`lsb_release -rs | cut -f1 -d"."`
 
+if [ "$Version" == "18" ];then
+echo -e "${GREEN}
+─▄███▄──▄███▄─
+▐████████████▌
+─████████████─
+──▀████████▀──
+─────▀██▀─────
+┊NIZK ‿ @TH3NK
+┊@SA3ED ‿ @TH3SS
+ ---------------------------------------------------------------------${CNIL}"
+echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
+${CNIL}";
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source Nizk
+${CNIL}";
+exit;
+fi
+
 
 if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source TH3BOSS${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source NIZK${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
 exit;
 fi
-
 
 if [ ! -f "./inc/Token.txt" ]; then
 echo -e "${RED}
@@ -53,25 +68,20 @@ exit;
 fi
 fi
 
-UserBot=$(redis-cli get ${BOTID}:UserNameBot:)
-
-echo "$Sudo"
-echo "$UserBot"
 
 chmod +x ./TG  
 
 if [ "$1" == "R" ]; then
 while true; do
 sleep 1s
-rm -fr ./BOSS
 sudo rm -fr ~/.telegram-cli
 ./TG -s ./inc/Run.lua --bot=$TOKEN
 done
 else 
-if ! screen -list | grep -q "$UserBot"; then
-screen -S "$UserBot" ./run R
+if ! screen -list | grep -q "nizk"; then
+screen -S nizk ./run R
 else
-screen -X -S "$UserBot" quit
-screen -S "$UserBot" ./run R
+screen -X -S nizk quit
+screen -S nizk ./run R
 fi
 fi
