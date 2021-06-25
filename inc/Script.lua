@@ -307,7 +307,7 @@ local UserID = data.sender_user_id_
 if UserID == our_id then  
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851  then  
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور الاساسي؛") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور البوت ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -351,7 +351,7 @@ NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851  then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور البوت ؛") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -393,7 +393,7 @@ UserID =  MsgText[2]
 if UserID == our_id then   
 return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد البوت ؛") 
 elseif UserID == "909279851" or UserID == "909279851" then 
-return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد مطور البوت ؛") 
+return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد مطور الاساسي ؛") 
 elseif UserID == tostring(SUDO_ID) then 
 return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -936,7 +936,7 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور البوت ؛") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -978,7 +978,7 @@ NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور الاساسي؛") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1027,7 +1027,7 @@ return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -3212,7 +3212,7 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
 elseif  UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛")
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -3243,7 +3243,7 @@ NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
 elseif  UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛")
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -3355,6 +3355,10 @@ if not msg.SudoBase then return "- هذا الامر يخص {المطور الا
 return All_File()
 end   
 
+
+if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' then
+return '- اصدار سورس الزعيم : *v'..version..'* '
+end
 
 if MsgText[1] == 'نسخه احتياطيه للمجموعات' then
 if not msg.SudoBase then return"- هذا الامر يخص {المطور الاساسي} فقط  \n" end
@@ -4056,16 +4060,20 @@ end
 
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
-اهلا بك في بوت ["..Bot_Name.."]
+اهلا اسمي ياقوت المميز
 
-- فريق ياقوت
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+مرحبا بك في سورس حمايه الخاص بعنوان ياقوت
+هدفه حمايه المجموعات التعليميه او الهادفه وتوفير
+اسهل السبل للحمايه لمستخدمينها
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+- فريق ياقوت
+
 - [قناة البوت](https://t.me/YaqotSa1)
 
 - [هدف القناة](https://t.me/YaqotSa1/20)
 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-- [مطور البوت] (https://t.me/PROTECTmnbot)
+- [مطور البوت](https://t.me/PROTECTmnbot)
 
 - [بوت تواصل مع المطور](https://t.me/PROTECMnbot)
 
@@ -4098,7 +4106,7 @@ TextS = TextS..NumFile.."- `"..name..'` » '..CeckFile..'\nl*»»* [{تفاصي�
 end
 return TextS..TextE
 else
-return "- اوبس , هناك خطا في مصفوفه الجيسون راسل مطور البوت ليتمكن من حل المشكله في اسرع وقت ممكن.!"
+return "- اوبس , هناك خطا في مصفوفه الجيسون راسل مطور السورس ليتمكن من حل المشكله في اسرع وقت ممكن.!"
 end
 else
 return "- اوبس , لا يوجد اتصال في الـapi راسل المطور ليتم حل المشكله في اسرع وقت ممكن.!"
@@ -4230,7 +4238,7 @@ local keyboard = {
 {"اذاعه بالتثبيت","تعطيل الاذاعه","تفعيل الاذاعه"},
 {"اذاعه","اذاعه عام","اذاعه خاص"},
 {"الملفات","اذاعه عام بالتوجيه"},
-{"المحظورين من التواصل"},
+{"المحظورين من التواصل","نقل ملكيه البوت"},
 {"تحديث","قائمه العام"},
 {"المطورين","ايدي"},
 {"اضف رد عام","الردود العامه"},
@@ -4297,7 +4305,7 @@ NameUser = Hyper_Link_Name(data)
 if data.type_.ID == "ChannelChatInfo" then 
 return sendMsg(arg.ChatID,arg.MsgID,"- عذرا هذا معرف قناة وليس حساب ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
 end
 
 redis:hset(boss..'username:'..UserID,'username',arg.UserName)
@@ -4321,7 +4329,7 @@ local UserID = data.id_
 local Resolv = ResolveUserName(data)
 NameUser = Hyper_Link_Name(data)
 if UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
 end
 if redis:sismember(boss..'bannedpv',UserID) then 
 return sendMsg(ChatID,MsgID,"- المستخدم  ⋙「 "..NameUser.." 」 \n-  تم بالتاكيد حظره  من التواصل ✓") 
@@ -4392,7 +4400,7 @@ if msg.text  == "حظر" then
 GetUserID(FwdUser,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data,20) end
 if FwdUser == 909279851 or FwdUser == 909279851 then 
-return sendMsg(arg.ChatID,arg.id_,"- لا يمكنك حظر مطور البوت ؛") 
+return sendMsg(arg.ChatID,arg.id_,"- لا يمكنك حظر مطور الاساسي ؛") 
 end
 redis:hset(boss..'username:'..arg.FwdUser,'username',USERNAME)
 if redis:sismember(boss..'bannedpv',FwdUser) then 
@@ -5273,7 +5281,7 @@ end
 
 if msg.text and msg.type == "channel" then
 if msg.text:match("^"..Bot_Name.." غادر$") and (msg.SudoBase or msg.SudoUser) then
-sendMsg(msg.chat_id_,msg.id_,'اوك باي ') 
+sendMsg(msg.chat_id_,msg.id_,'تم المغادره بأمر من المطور الاساسي ⚡️ ') 
 rem_data_group(msg.chat_id_)
 StatusLeft(msg.chat_id_,our_id)
 return false
@@ -6350,7 +6358,7 @@ elseif Text== "سلام عليكم ورحمة الله" then
 return sendMsg(msg.chat_id_,msg.id_,"عليكم السلام ورحمة الله")
 elseif Text== "سلام عليكم ورحمة الله وبركاته"  then return sendMsg(msg.chat_id_,msg.id_,"عليكم السلام ورحمة الله وبركاته")
 elseif Text== "شغال"  then return sendMsg(msg.chat_id_,msg.id_,"نعــم 👌🏻💯")
-elseif Text== "ايديي" or Text=="ايدي 🆔" then 
+elseif Text== "ايديي" or Text=="ايدي" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data) end
 USERNAME = USERNAME:gsub([[\_]],"_")
@@ -6368,9 +6376,18 @@ https://telegram.org/deactivate
 
  🇸🇦
 ]] )
-elseif Text== "انجب" or Text== "نجب" or Text=="جب" then
+--=====================================
+elseif Text== "البوت" or Text== "يابوت" or Text=="بوت" then
 if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"تـم 🙂😂.")
+return sendMsg(msg.chat_id_,msg.id_,"["..Bot_Name.."]")
+elseif msg.Creator then 
+return sendMsg(msg.chat_id_,msg.id_,"["..Bot_Name.."]")
+elseif msg.Director then 
+return sendMsg(msg.chat_id_,msg.id_,"["..Bot_Name.."]")
+elseif msg.Admin then 
+return sendMsg(msg.chat_id_,msg.id_,"["..Bot_Name.."]")
+else 
+return sendMsg(msg.chat_id_,msg.id_,"["..Bot_Name.."]")
 end 
 end 
 
@@ -6706,6 +6723,7 @@ Boss = {
 "^(التاريخ)$",
 "^(متجر الملفات)$",
 "^(الملفات)$",
+"^(اصدار السورس)$",
 "^(الاصدار)$",
 "^(server)$",
 "^(تعيين امر)$",
@@ -6743,6 +6761,8 @@ Boss = {
 "^(مسح الايدي عام)$", 
 "^(مسح ايدي عام)$", 
 "^(مسح كليشة الايدي عام)$", 
+"^(السورس)$",
+"^(سورس)$",
 "^(م المطور)$", 
 "^(اوامر الرد)$",
 "^(اوامر الملفات)$",

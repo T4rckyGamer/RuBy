@@ -438,7 +438,7 @@ textMD = [[ - اهلا بك في قائمة اوامر المطورين
 - تعيين ايدي عام
 - مسح ايدي عام
 - تفعيل / تعطيل تعيين الايدي
-- تحديث]] 
+- تحديث ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
 local textD = redis:get(boss..":awamer_Klesha_mtwr:")
@@ -589,17 +589,6 @@ msg.Editeinline = true
 return SendMsgInline(msg)
 end
 
-
-function RandomText()
-local Cominnt = {
-'صورتك كلش حلو 😘❤️',
-"طالع تخبل 💘",
-"وفالله 😔💘",
-"فدوا للجمال 😉💘",
-"صورتك ما تعجبني 😒",
-}
-return Cominnt[math.random(#Cominnt)] 
-end
 
 
 function CheckUserAdmin(msg)
@@ -1000,25 +989,8 @@ local UrlInfo = https.request(ApiToken..'/getfile?file_id='..FileID)
 return ApiToken..'/'..JSON.decode(UrlInfo).result.file_path
 end 
 
-----------------------{ End Api Token Bot }-----------------------------
-
-function UpdateSource(msg,edit)
-if edit then EditMsg(msg.chat_id_,msg.id_,'10% - |█          |') end
-if edit then EditMsg(msg.chat_id_,msg.id_,'20% - |███         |') end
-download_file('https://raw.githubusercontent.com/T4rckyGamer/SaUdiboT/master/inc/Run.lua','./inc/Run.lua')
-if edit then EditMsg(msg.chat_id_,msg.id_,'40% - |█████       |') end
-download_file('https://raw.githubusercontent.com/T4rckyGamer/SaUdiboT/master/inc/locks.lua','./inc/locks.lua')
-if edit then EditMsg(msg.chat_id_,msg.id_,'60% - |███████     |') end
-download_file('https://raw.githubusercontent.com/T4rckyGamer/SaUdiboT/master/inc/Script.lua','./inc/Script.lua')
-if edit then EditMsg(msg.chat_id_,msg.id_,'80% - |█████████   |') end
-download_file('https://raw.githubusercontent.com/T4rckyGamer/SaUdiboT/master/inc/functions.lua','./inc/functions.lua')
-if edit then EditMsg(msg.chat_id_,msg.id_,'100% - |█████████████|\n\n🔝-* تم تحديث السورس الى اصدار *v'..redis:get(boss..":VERSION")..'*\n📟-* تم اعاده تشغيل السورس بنجاح') end
-if edit then dofile("./inc/Run.lua") end
-print("Update Source And Reload ~ ./inc/Run.lua")
-
-end
 ----------------------{ Get Name Bot }-----------------------------
-Bot_Name = redis:get(boss..":NameBot:") or "الزعيم"
+Bot_Name = redis:get(boss..":NameBot:") or "ياقوت"
 
 
 function GetType(ChatID) 
@@ -1388,26 +1360,26 @@ end
 function Getrtba(UserID,ChatID)
 if UserID == our_id then 
 var = 'هذا البوت' 
-elseif UserID == 909279851or UserID == 909279851 then 
-var = 'مطور البوت '
+elseif UserID == 909279851 or UserID == 909279851  then 
+var = 'مطور السورس'
 elseif  UserID == SUDO_ID then
 var = redis:get(boss..":RtbaNew1:"..ChatID) or 'مطور اساسي 👨🏻‍✈️' 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then
 var = redis:get(boss..":RtbaNew2:"..ChatID) or 'مطور البوت 👨🏽‍💻' 
 elseif redis:sismember(boss..':MONSHA_Group:'..ChatID,UserID) then
-var = redis:get(boss..":RtbaNew3:"..ChatID) or ' المنشىء اساسي👷🏽' 
+var = redis:get(boss..":RtbaNew3:"..ChatID) or ' المنشىء اساسي' 
 elseif redis:sismember(boss..':Malk_Group:'..ChatID,UserID) then
-var = redis:get(boss..":RtbaNew8:"..ChatID) or ' المالك 👷🏽' 
+var = redis:get(boss..":RtbaNew8:"..ChatID) or ' المالك' 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then
-var = redis:get(boss..":RtbaNew4:"..ChatID) or ' المنشىء 👷🏽' 
+var = redis:get(boss..":RtbaNew4:"..ChatID) or ' المنشىء' 
 elseif redis:sismember(boss..'owners:'..ChatID,UserID) then
-var = redis:get(boss..":RtbaNew5:"..ChatID) or 'مدير البوت 👨🏼‍⚕️' 
+var = redis:get(boss..":RtbaNew5:"..ChatID) or 'مدير البوت' 
 elseif redis:sismember(boss..'admins:'..ChatID,UserID) then
-var = redis:get(boss..":RtbaNew6:"..ChatID) or 'ادمن في البوت 👨🏼‍🎓' 
+var = redis:get(boss..":RtbaNew6:"..ChatID) or 'ادمن في البوت' 
 elseif redis:sismember(boss..'whitelist:'..ChatID,UserID) then
 var = redis:get(boss..":RtbaNew7:"..ChatID) or 'عضو مميز ⭐️' 
 else
-var = 'فقط عضو 🙍🏼‍♂️' 
+var = 'فقط عضو' 
 end
 return var
 end
@@ -1463,8 +1435,6 @@ elseif msg.content_.ID == "MessageAnimation" then
 redis:incr(boss..':animation:'..msg.chat_id_..':'..msg.sender_user_id_)
 end
 end
-
-
 --================================{{  We Sudoer  }} ===================================
 
 function we_sudo(msg)
@@ -2085,12 +2055,10 @@ if not msg.SudoUser and not lock_servicez then return '- هذا الامر يخ�
 if msg.is_post_ then return "- عذرا هذا بوت حمايه للمجموعات وليس للقنوات  " end
 if msg.type ~= "channel" then return '- البوت يعمل فقط في المجموعات العامه لذا يجب ترقية المجموعه ووضع معرف للمجموعه لتصبح عامه ' end
 
-
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg 
 local NameUser   = Hyper_Link_Name(data)
-if redis:get(boss..'group:add'..msg.chat_id_) then  return sendMsg(msg.chat_id_,msg.id_,'- المجموعه بالتاكيد ✓️ تم تفعيلها \n- بواسطه ⋙「 '..NameUser..' 」 \n') end
-
+if redis:get(boss..'group:add'..msg.chat_id_) then  return sendMsg(msg.chat_id_,msg.id_,'📬¦ المجموعه بالتأكيد ✓️ تم تفعيلها \n📮¦ بواسطه ⋙「 '..NameUser..' 」 \n') end
 local UserChaneel = redis:get(boss..":UserNameChaneel")
 if UserChaneel and not msg.SudoBase then
 local url , res = https.request(ApiToken..'/getchatmember?chat_id='..UserChaneel..'&user_id='..msg.sender_user_id_)
@@ -2098,23 +2066,10 @@ if res == 200 then
 print(url) 
 local Req = JSON.decode(url)
 if Req.ok and Req.result and Req.result.status == "left" or Req.result.status == "kicked" then
-return sendMsg(msg.chat_id_,msg.id_,"- آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n- ثم آرجع آرسـل تفعيل .")
+return sendMsg(msg.chat_id_,msg.id_,"🚸| آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛| ثم آرجع آرسـل تفعيل .")
 end
 else
-return "- آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n- ثم آرجع آرسـل تفعيل ."
-end
-end
-
-local UserChaneel = redis:get(boss..":UserNameChaneel")
-if UserChaneel and not msg.SudoBase then
-local url , res = https.request(ApiToken..'/getchatmember?chat_id='..UserChaneel..'&user_id='..msg.sender_user_id_)
-if res == 200 then
-local Req = JSON.decode(url)
-if Req.ok and Req.result and Req.result.status == "left" or Req.result.status == "kicked" then
-return sendMsg(msg.chat_id_,msg.id_,"- عذراً يجب عليك الاشتراك في  القناه ["..UserChaneel.."] \n لتتمكن من استخدام البوت بشكل كامل .")
-end
-else
-return "- عذراً يجب عليك الاشتراك في  القناه ["..UserChaneel.."] \n لتتمكن من استخدام البوت بشكل كامل ."
+return "🚸| آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛| ثم آرجع آرسـل تفعيل ."
 end
 end
 
@@ -2255,7 +2210,7 @@ return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد البوت  ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد مطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك تقييد المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
@@ -2412,7 +2367,7 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر البوت  ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -2443,7 +2398,7 @@ if cmd == "kick" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك طرد البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك طرد مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك طرد مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -2488,7 +2443,7 @@ if cmd == "ktm" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك كتم البوت ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك كتم مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك كتم مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك كتم المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -2549,7 +2504,7 @@ if cmd == "bandall" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر البوت  ؛") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -2594,7 +2549,7 @@ end
 --========================================================================
 if cmd == "DwnAll" then ----------- تنزيل الكل
 if UserID == our_id then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر مع البوت ❕") end
-if UserID == 909279851 or UserID == 909279851 then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر ضد مطور البوت ❕") end
+if UserID == 909279851 or UserID == 909279851 then return sendMsg(ChatID,MsgID,"- لا يمكنك تنفيذ الامر ضد مطور السورس ❕") end
 
 if UserID == SUDO_ID then 
 rinkuser = 1
