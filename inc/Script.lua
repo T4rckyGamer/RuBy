@@ -306,8 +306,8 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"- عذرا
 local UserID = data.sender_user_id_
 if UserID == our_id then  
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد البوت ؛") 
-elseif UserID == 909279851 or UserID == 909279851  then  
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور الاساسي؛") 
+elseif UserID == 819385837 or UserID == 60809019  then  
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -350,8 +350,8 @@ local UserID = data.id_
 NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد البوت ؛") 
-elseif UserID == 909279851 or UserID == 909279851  then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور البوت ؛") 
+elseif UserID == 819385837 or UserID == 60809019  then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد مطور السورس ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -392,8 +392,8 @@ elseif MsgText[2] and MsgText[2]:match('^%d+$') then  -- By UserID
 UserID =  MsgText[2] 
 if UserID == our_id then   
 return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد البوت ؛") 
-elseif UserID == "909279851" or UserID == "909279851" then 
-return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد مطور البوت ؛") 
+elseif UserID == "819385837" or UserID == "60809019" then 
+return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد مطور السورس ؛") 
 elseif UserID == tostring(SUDO_ID) then 
 return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تقييد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -935,8 +935,8 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"- عذرا
 local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد البوت ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور البوت ؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور السورس؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -977,8 +977,8 @@ UserName = arg.UserName
 NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد البوت ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور الاساسي؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد مطور السورس؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك طرد المطور الاساسي ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1026,8 +1026,8 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1080,8 +1080,8 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور الاساسي ؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1268,8 +1268,8 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم البوت  ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم المطور الاساسي ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم مطور الاساسي ؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم مطور السورس ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1311,8 +1311,8 @@ if UserID == our_id then
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم البوت  ؛") 
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم المطور الاساسي ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم مطور الاساسي ؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم مطور السورس ؛") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك كتم المطور ؛") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -2554,7 +2554,7 @@ NameUser = Hyper_Link_Name(data)
 msg = arg.msg
 UserID = msg.UserID
 if UserID == our_id then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر مع البوت\n") end
-if UserID == 909279851 or UserID == 909279851 then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر ضد مطور الاساسي \n") end
+if UserID == 819385837 or UserID == 60809019 then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر ضد مطور السورس \n") end
 
 if UserID == SUDO_ID then 
 rinkuser = 1
@@ -2669,7 +2669,7 @@ local UserID = data.id_
 if UserID == our_id then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر مع البوت ") end
 
 msg = arg.msg
-if UserID == 909279851 or UserID == 909279851 then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر ضد مطور الاساسي ") end
+if UserID == 819385837 or UserID == 60809019 then return sendMsg(msg.chat_id_,msg.id_,"- لا يمكنك تنفيذ الامر ضد مطور السورس ") end
 NameUser = Hyper_Link_Name(data)
 
 if UserID == SUDO_ID then 
@@ -3211,8 +3211,8 @@ if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"- عذرا
 local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
-elseif  UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛")
+elseif  UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور السورس ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -3242,8 +3242,8 @@ NameUser = Hyper_Link_Name(data)
 
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر البوت ؛") 
-elseif  UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛")
+elseif  UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور السورس ؛")
 elseif UserID == SUDO_ID then 
 return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر المطور الاساسي ؛")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -3356,6 +3356,26 @@ return All_File()
 end   
 
 
+if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' then
+return '- اصدار سورس الزعيم : *v'..version..'* '
+end
+
+if MsgText[1] == 'تحديث السورس' then
+if not msg.SudoBase then return "- هذا الامر يخص {المطور الاساسي} فقط  \n" end
+local GetVerison = https.request('https://th3bs.github.io/GetVersion.txt') or "0"
+GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
+if GetVerison > version then
+UpdateSourceStart = true
+sendMsg(msg.chat_id_,msg.id_,'- يوجد تحديث جديد الان \n- جاري تنزيل وتثبيت التحديث  ...')
+redis:set(boss..":VERSION",GetVerison)
+return false
+else
+return "- الاصدار الحالي : *v"..version.."* \n- لديـك احدث اصدار "
+end
+return false
+end
+
+
 if MsgText[1] == 'نسخه احتياطيه للمجموعات' then
 if not msg.SudoBase then return"- هذا الامر يخص {المطور الاساسي} فقط  \n" end
 return buck_up_groups(msg)
@@ -3407,6 +3427,12 @@ return " البوت شـغــال"
 end
 
 if MsgText[1]== "ايدي" and msg.type == "pv" then return  "\n"..msg.sender_user_id_.."\n"  end
+
+if MsgText[1]== "قناة السورس" and msg.type == "pv" then
+local inline = {{{text="قناه‏‏ السـورس : الـزعـيـم ",url="t.me/th3bs"}}}
+send_key(msg.sender_user_id_,'  [قناة السورس: الـزعـيـم](t.me/th3bs)',nil,inline,msg.id_)
+return false
+end
 
 if MsgText[1]== "الاحصائيات" then
 if not msg.SudoBase then return"- هذا الامر يخص {المطور الاساسي} فقط  \n" end
@@ -3962,8 +3988,8 @@ local text = [[  اهلا بك في قائمة اوامر المطورين
 - تعيين ايدي عام
 - مسح ايدي عام
 - تفعيل / تعطيل تعيين الايدي
-- تحديث]] 
-
+- تحديث
+- تحديث السورس ]]
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -4056,20 +4082,22 @@ end
 
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
-اهلا بك في بوت ["..Bot_Name.."]
+Welcome To Source BoSs 
 
-- فريق ياقوت
+- BOSS TEAM 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-- [قناة البوت](https://t.me/YaqotSa1)
+- [Source Channel](https://t.me/TH3BS)
 
-- [هدف القناة](https://t.me/YaqotSa1/20)
+- [Source Install](https://t.me/TH3BS/4121)
+
+- [Changing ID Channel](https://t.me/Change_id/1)
+
+- [Explanation Channel](https://t.me/SourceBoss/1)
 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-- [مطور البوت] (https://t.me/PROTECTmnbot)
+- [Source Programmer](https://t.me/TH3BOSS)
 
-- [بوت تواصل مع المطور](https://t.me/PROTECMnbot)
-
-
+- [Twasl Bot Programmer](https://t.me/TH3BOSSBOT)
 
 ]]
 end
@@ -4098,7 +4126,7 @@ TextS = TextS..NumFile.."- `"..name..'` » '..CeckFile..'\nl*»»* [{تفاصي�
 end
 return TextS..TextE
 else
-return "- اوبس , هناك خطا في مصفوفه الجيسون راسل مطور البوت ليتمكن من حل المشكله في اسرع وقت ممكن.!"
+return "- اوبس , هناك خطا في مصفوفه الجيسون راسل مطور السورس ليتمكن من حل المشكله في اسرع وقت ممكن.!"
 end
 else
 return "- اوبس , لا يوجد اتصال في الـapi راسل المطور ليتم حل المشكله في اسرع وقت ممكن.!"
@@ -4230,10 +4258,11 @@ local keyboard = {
 {"اذاعه بالتثبيت","تعطيل الاذاعه","تفعيل الاذاعه"},
 {"اذاعه","اذاعه عام","اذاعه خاص"},
 {"الملفات","اذاعه عام بالتوجيه"},
-{"المحظورين من التواصل"},
-{"تحديث","قائمه العام"},
+{"المحظورين من التواصل","نقل ملكيه البوت"},
+{"تحديث","قائمه العام","قناة السورس"},
 {"المطورين","ايدي"},
 {"اضف رد عام","الردود العامه"},
+{"تحديث السورس"},
 {"الغاء الامر"}}
 return send_key(msg.sender_user_id_,text,keyboard,nil,msg.id_)
 else
@@ -4296,8 +4325,8 @@ local UserID = data.id_
 NameUser = Hyper_Link_Name(data)
 if data.type_.ID == "ChannelChatInfo" then 
 return sendMsg(arg.ChatID,arg.MsgID,"- عذرا هذا معرف قناة وليس حساب ؛") 
-elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+elseif UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 end
 
 redis:hset(boss..'username:'..UserID,'username',arg.UserName)
@@ -4320,8 +4349,8 @@ if not data.id_ then return sendMsg(ChatID,MsgID,"- العضو لا يوجد ") 
 local UserID = data.id_
 local Resolv = ResolveUserName(data)
 NameUser = Hyper_Link_Name(data)
-if UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور البوت ؛") 
+if UserID == 819385837 or UserID == 60809019 then 
+return sendMsg(ChatID,MsgID,"- لا يمكنك حظر مطور السورس ؛") 
 end
 if redis:sismember(boss..'bannedpv',UserID) then 
 return sendMsg(ChatID,MsgID,"- المستخدم  ⋙「 "..NameUser.." 」 \n-  تم بالتاكيد حظره  من التواصل ✓") 
@@ -4391,8 +4420,8 @@ if msg.text then
 if msg.text  == "حظر" then
 GetUserID(FwdUser,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data,20) end
-if FwdUser == 909279851 or FwdUser == 909279851 then 
-return sendMsg(arg.ChatID,arg.id_,"- لا يمكنك حظر مطور البوت ؛") 
+if FwdUser == 819385837 or FwdUser == 60809019 then 
+return sendMsg(arg.ChatID,arg.id_,"- لا يمكنك حظر مطور السورس ؛") 
 end
 redis:hset(boss..'username:'..arg.FwdUser,'username',USERNAME)
 if redis:sismember(boss..'bannedpv',FwdUser) then 
@@ -6307,31 +6336,41 @@ if msg.text and redis:get(boss.."lock_rdodSource"..msg.chat_id_) then
 --================================{{  Reply Bot  }} ===================================
 
 local su = {
-"نعم معك ["..Bot_Name.."]",
-"تفضل",
-"امرني"}
+"نـعـم حـبـيـبي المطـور 💙.",
+"ها حبـيـبي 💙.",
+}
 local ss97 = {
-"امرني","تفضل",
-"نعم","سم","امرني معك ["..Bot_Name.."] ","نعم انا ["..Bot_Name.."]",
-"تأمر امر تفضل","نعم","تفضل معك ["..Bot_Name.."]",
+"نـعـم حـبـيـبي 💙.",
+"ها حبـيـبي 💙.",
 }
 local bs = {
-"مابوس 🌚💔",
-"اآآآم͠ــ.❤️😍ــو͠و͠و͠آ͠آ͠ح͠❤️عسسـل❤️",
-"الوجه ميساعد 😐✋",
-"ممممح😘ححح😍😍💋",
+"مابوس 🙂.",
+"وفف مح ♥️.",
+"الوجه ميساعد😔😂",
+"مح ؏ شفه ♥️.",
 }
 local ns = {
-"قل السلام عليكم ورحمة الله وبركاته ",
-"قل السلام عليكم ورحمة الله ",
-"قل السلام عليكم ",
-"قل سلام عليكم ",
+"هـلا حبـيـبي 💙.",
+"هـلـوات حـبـي ♥️.",
+"هـلـوات نـورت/ي♥️.",
+"هـلـوات 🖤.",
 }
 local sh = {
-"قل السلام عليكم ورحمة الله وبركاته ",
-"قل السلام عليكم ورحمة الله ",
-"قل السلام عليكم ",
-"قل سلام عليكم ",
+"هـلا حبـيـبي المـطـور 💙.",
+"هـلـوات نـورت مـطـوري ♥️.",
+}
+local lovm = {
+"اكـرهـك 🙂🖤.",
+"دي حـبـي 😔😂.",
+"اعـشـقك مــح 💕.",
+"وف اي احـبك 💗.",
+"ماحـبـك 🙂🖤.",
+"امــوت عـلـيك قـلـبـي 💗.",
+"اذا كـتلك احـبـك شـرح تــستــفاد 🙂💙.",
+"وخـر مـاحـبـك 😔😂.",
+}
+local song = {
+"شــكـلولـك عـلـيه سـيف نـبـيـل 😔😂.",
 }
 
 local Text = msg.text
@@ -6341,32 +6380,147 @@ if msg.SudoUser and Text == Bot_Name and not Text2 then
 return sendMsg(msg.chat_id_,msg.id_,su[math.random(#su)])
 elseif not msg.SudoUser and Text== Bot_Name and not Text2 then  
 return sendMsg(msg.chat_id_,msg.id_,ss97[math.random(#ss97)])
+elseif Text:match("^كول (.*)$") then
+if utf8.len(Text:match("^كول (.*)$")) > 50 then 
+return sendMsg(msg.chat_id_,msg.id_,"- ما اكدر اكول اكثر من 50 حرف 🙌🏾")
+end
+local callback_Text = FlterName(Text:match("^كول (.*)$"),50)
+if callback_Text and callback_Text == 'الاسم سبام 📛' then
+return sendMsg(msg.chat_id_,msg.id_,"- للاسف النص هذا مخالف ")
+else
+return sendMsg(msg.chat_id_,0,callback_Text) 
+end
+elseif Text:match("^"..Bot_Name.." اتفل (.*)$") then
+if msg.reply_id then
+sendMsg(msg.chat_id_,msg.id_,'تــم حـبـي تففففف😔😂💦')
+sendMsg(msg.chat_id_,msg.reply_id,'خختتففوو 😔😂💦')
+else 
+return sendMsg(msg.chat_id_,msg.id_,"  🕵🏻 وينه بله سويله رد 🙄")
+end
+elseif Text:match("^"..Bot_Name.." رزله(.*)$") and msg.SudoUser then
+if msg.reply_id then
+sendMsg(msg.chat_id_,msg.id_,'تــم حـبـي تففففف😔😂💦')
+return sendMsg(msg.chat_id_,msg.reply_id,'تعال هيوو شو طالعه عينك ولسانك طويل سربوت اشو تعال بله هذا ويهك  كول بلعباس دي لك وتفو بعد لتندك بتاج راسك خوش حبي 😉🤣.') 
+end
+elseif Text:match("^بوس (.*)$") then 
+if msg.reply_id then 
+return sendMsg(msg.chat_id_,msg.reply_id,bs[math.random(#bs)])
+else
+return sendMsg(msg.chat_id_,msg.id_,"📌 وينه بله سويله رد 🕵🏻")
+end 
 elseif msg.SudoUser and Text=="هلو" then 
 return sendMsg(msg.chat_id_,msg.id_,sh[math.random(#sh)])
 elseif not msg.SudoUser and Text=="هلو" then 
 return sendMsg(msg.chat_id_,msg.id_,ns[math.random(#ns)])
-elseif Text== "سلام عليكم" then return sendMsg(msg.chat_id_,msg.id_,"عليكم السلام")
-elseif Text== "سلام عليكم ورحمة الله" then 
-return sendMsg(msg.chat_id_,msg.id_,"عليكم السلام ورحمة الله")
-elseif Text== "سلام عليكم ورحمة الله وبركاته"  then return sendMsg(msg.chat_id_,msg.id_,"عليكم السلام ورحمة الله وبركاته")
-elseif Text== "شغال"  then return sendMsg(msg.chat_id_,msg.id_,"نعــم 👌🏻💯")
-elseif Text== "ايديي" or Text=="ايدي 🆔" then 
+elseif msg.SudoUser and Text== "احبك" then 
+return sendMsg(msg.chat_id_,msg.id_,"امـوت علـيـك قـلـبـي 💕.")
+elseif msg.SudoUser and Text== "تحبني" or Text=="حبك" then 
+return sendMsg(msg.chat_id_,msg.id_,"امـوت علـيـك قـلـبـي 💕.")
+elseif not msg.SudoUser and Text== "احبك" or Text=="حبك" then 
+return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
+elseif not msg.SudoUser and Text== "تحبني" then
+return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
+elseif Text== "غني" or Text=="غنيلي" then 
+return sendMsg(msg.chat_id_,msg.id_,song[math.random(#song)])
+elseif Text=="اتفل" or Text=="تفل" then
+if msg.Admin then 
+return sendMsg(msg.chat_id_,msg.id_,'خختتففوو 😔😂💦️')
+else 
+return sendMsg(msg.chat_id_,msg.id_,"انـجـب مـاتـفـل عـيـب 🥲.") 
+end
+elseif Text== "تف" then return sendMsg(msg.chat_id_,msg.id_,"اتـفــل اقـوة😔😂.")
+elseif Text== "شلونكم" or Text== "شلونك" or Text== "شونك" or Text== "شونكم" then 
+return sendMsg(msg.chat_id_,msg.id_,"تـمـام قـلـبي 💙+ انـت شـلـونـك شـخـبـارك؟")
+elseif Text== "صاكه"  then return sendMsg(msg.chat_id_,msg.id_,"اوفف دز صـورتـهـا 🥲😂")
+elseif Text== "وينك"  then return sendMsg(msg.chat_id_,msg.id_,"يـمـك حـبــيـي 💙.")
+elseif Text== "منورين"  then return sendMsg(msg.chat_id_,msg.id_,"نـورك حـبــيـي 💙.")
+elseif Text== "هاي"  then return sendMsg(msg.chat_id_,msg.id_,"هـايـات حـبـي 💕.")
+elseif Text== "🙊"  then return sendMsg(msg.chat_id_,msg.id_,"ابــوس الخـجـلان 🥲💙")
+elseif Text== "😢"  then return sendMsg(msg.chat_id_,msg.id_,"لـتـبـجـي حـيـاتـي 💕.")
+elseif Text== "😭"  then return sendMsg(msg.chat_id_,msg.id_,"لـتـبـجـي حـيـاتـي 💕.")
+elseif Text== "منور"  then return sendMsg(msg.chat_id_,msg.id_,"نــورك ♥️.")
+elseif Text== "😒" and not is_sudo then return sendMsg(msg.chat_id_,msg.id_,"شـبـيـك حـبـي 🖤.")
+elseif Text== "مح"  then return sendMsg(msg.chat_id_,msg.id_,"اوفف عـسـل 🍯♥️.")
+elseif Text== "شكرا" or Text== "ثكرا" then return  sendMsg(msg.chat_id_,msg.id_,"الــعـفـو عـمـري 💕.")
+elseif Text== "انته وين"  then return sendMsg(msg.chat_id_,msg.id_,"بالــبــ🏠ــيــت")
+elseif Text== "اكرهك"  then return sendMsg(msg.chat_id_,msg.id_," عـليـك الله حـبـنـي😔😂.")
+elseif Text== "اريد اكبل" then return sendMsg(msg.chat_id_,msg.id_,"بـطـران 🥲😂.")
+elseif Text== "ضوجه"  then return sendMsg(msg.chat_id_,msg.id_,"وفف كـلـش 🙂🖤.")
+elseif Text== "اروح اصلي" then return sendMsg(msg.chat_id_,msg.id_,"اجـي اصـلـي وراك 😔😂.️")
+elseif Text== "صاك"  then return sendMsg(msg.chat_id_,msg.id_,"اخ دزي صـورتـته😔😂.")
+elseif Text== "اجيت" or Text=="اني اجيت" then return  sendMsg(msg.chat_id_,msg.id_,"كل الـهـلا ♥️.")
+elseif Text== "حفلش"  then return sendMsg(msg.chat_id_,msg.id_,"اي خـوش زلـمه ومـن حـقك😔😂.")
+elseif Text== "نايمين" then return sendMsg(msg.chat_id_,msg.id_,"لا بـعـدنه 🖤")
+elseif Text== "اكو احد" then return sendMsg(msg.chat_id_,msg.id_,"اي حـبـي تـفضـل 💙.")
+elseif Text== "شكو" then return sendMsg(msg.chat_id_,msg.id_,"كـلـشي مـاكـو لا صـيـر حـشري😔😂.")
+elseif Text== "انت منو" then return sendMsg(msg.chat_id_,msg.id_,"تـاج راسـك الـفـوك حـبي😔😂.")
+elseif Text== "كلخرا" then return sendMsg(msg.chat_id_,msg.id_,"خرا بحـلكك حـيـوان 🙂😂")
+elseif Text== "حبيبتي" then return sendMsg(msg.chat_id_,msg.id_,"هـا قـلـبي ♥️.")
+elseif Text== "حروح اسبح" then return sendMsg(msg.chat_id_,msg.id_,"اجـي اسـبحـكك😔😂.")
+elseif Text== "😔"  then return sendMsg(msg.chat_id_,msg.id_,"لــضـوج يـحـبي💙.")
+elseif Text== "☹️"  then return sendMsg(msg.chat_id_,msg.id_,"لــضـوج يـحـبي💙")
+elseif Text== "جوعان"  then return sendMsg(msg.chat_id_,msg.id_,"نـاكل سـوه؟")
+elseif Text== "لتحجي"  then return sendMsg(msg.chat_id_,msg.id_,"ونـت شـعلـيك حـاجـي بـحـلــكك 😉🤣")
+elseif Text== "معليك" or Text== "شعليك" then return sendMsg(msg.chat_id_,msg.id_,"بـكـيفـي 🙂😂.")
+elseif Text== "شدسون" or Text== "شداتسوون" or Text== "شدتسون" then return  sendMsg(msg.chat_id_,msg.id_,"نـسـولـف 💙.")
+elseif Text:match(Bot_Name.." شلونك$") then 
+return sendMsg(msg.chat_id_,msg.id_,"تـمـام قـلـبي 💙+ انـت شـلـونـك شـخـبـارك؟")
+elseif Text== "يومه فدوه"  then return sendMsg(msg.chat_id_,msg.id_,"فدؤه الج حياتي 😍😙")
+elseif Text== "افلش"  then return sendMsg(msg.chat_id_,msg.id_,"خـوش زلـمه 😔😂.")
+elseif Text== "احبج"  then return sendMsg(msg.chat_id_,msg.id_,"انـي هـم حـبـيــيي💕.")
+elseif Text== "شكو ماكو"  then return sendMsg(msg.chat_id_,msg.id_,"كـلـشي مـاكــو 🙃♥️️")
+elseif Text== "اغير جو"  then return sendMsg(msg.chat_id_,msg.id_,"تـغـير جـو لـو تـزحـف ؏ بـنـات 😔😂")
+elseif Text== "😋"  then return sendMsg(msg.chat_id_,msg.id_,"وفف لـسانـك 🥲♥️")
+elseif Text== "😡"  then  return sendMsg(msg.chat_id_,msg.id_,"اخ عـصـبـي😔😂."  )
+elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"مـراحــب ♥️.")
+elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
+return sendMsg(msg.chat_id_,msg.id_,"وعـلــيكم الـسـلام 💙." )
+elseif Text== "واكف"  then return sendMsg(msg.chat_id_,msg.id_,"لا بـعـدنـي شـغـال 🙃🖤." )
+elseif Text== "🚶🏻"  then return sendMsg(msg.chat_id_,msg.id_,"نـمـشي ســوة💕؟")
+elseif Text== "البوت واكف" then return sendMsg(msg.chat_id_,msg.id_,"لا بـعـدنـي شـغـال 🙃🖤.")
+elseif Text== "ضايج"  then return sendMsg(msg.chat_id_,msg.id_,"وفف ابـوس الـضايـج انــي🥲♥️.")
+elseif Text== "ضايجه"  then return sendMsg(msg.chat_id_,msg.id_,"وفف ابـوس الـضايـج انــي🥲♥️.")
+elseif Text== "😳" or Text== "😳😳" or Text== "😳😳😳" then return sendMsg(msg.chat_id_,msg.id_,"شـبـيـك مـصـدوم 😔😂؟")
+elseif Text== "صدك"  then return sendMsg(msg.chat_id_,msg.id_,"قـابـل اجـذب عـلـيـك ؟")
+elseif Text== "شغال"  then return sendMsg(msg.chat_id_,msg.id_,"اي حـبــيبي شـغـال 🙃🖤.")
+elseif Text== "تخليني"  then return sendMsg(msg.chat_id_,msg.id_,"اي اخـليك بـنـص عـيني 🥲💕.")
+elseif Text== "فديتك" or Text== "فديتنك"  then return  sendMsg(msg.chat_id_,msg.id_,"مـح حـياتـي♥️." )
+elseif Text== "بوت"  then return sendMsg(msg.chat_id_,msg.id_,"اسـمـي ["..Bot_Name.."] 💙.")
+elseif Text== "زاحف"  then return sendMsg(msg.chat_id_,msg.id_,"لـيـش اكـو احـله من زحـف😔😂.🌝")
+elseif Text== "حلو"  then return sendMsg(msg.chat_id_,msg.id_,"مـثـلـك 💕.")
+elseif Text== "عاش"  then return sendMsg(msg.chat_id_,msg.id_,"مـح 💙.")
+elseif Text== "مات"  then return sendMsg(msg.chat_id_,msg.id_,"طـبه مـرض 😔😂.")
+elseif Text== "ورده" or Text== "وردة" then return sendMsg(msg.chat_id_,msg.id_,"عـطـرها 💕.")
+elseif Text== "شسمك"  then return sendMsg(msg.chat_id_,msg.id_,"مـكـتـوب فـوك🙂😂.")
+elseif Text== "فديت" or Text=="فطيت" then return sendMsg(msg.chat_id_,msg.id_,"فـدوه لـوجـهك 💙.")
+elseif Text== "واو"  then return sendMsg(msg.chat_id_,msg.id_,"جـمـيــل 🖤.")
+elseif Text== "زاحفه" or Text== "زاحفة" then return  sendMsg(msg.chat_id_,msg.id_,"لـيـش اكـو احـله من زحـف😔😂.")
+elseif Text== "حبيبي" or Text=="حبي" then return  sendMsg(msg.chat_id_,msg.id_,"هـا حـيـاتـي🥲♥️.")
+elseif Text== "حبيبتي" then return sendMsg(msg.chat_id_,msg.id_,"امـوت بـيك💕.")
+elseif Text== "حياتي" then return sendMsg(msg.chat_id_,msg.id_,"هـا قـلـبي ♥️.")
+elseif Text== "عمري" then return sendMsg(msg.chat_id_,msg.id_,"هـا قـلـبي ♥️. ")
+elseif Text== "اسكت" then return sendMsg(msg.chat_id_,msg.id_,"ما اسـكـت 😔😂.")
+elseif Text== "بتحبني" then return sendMsg(msg.chat_id_,msg.id_,"بـمـوت فـيـك 💕.")
+elseif Text== "موجود" then return sendMsg(msg.chat_id_,msg.id_,"اي حـب تــفـضل 💗.")
+elseif Text== "اكلك" then return sendMsg(msg.chat_id_,msg.id_,"كـول قـلـبي ♥️.")
+elseif Text== "فدوه" or Text=="فدوة" or Text=="فطوه" or Text=="فطوة" then  
+return sendMsg(msg.chat_id_,msg.id_,"لـوجـهـك ♥️.")
+elseif Text== "دي"  then return sendMsg(msg.chat_id_,msg.id_,"دعـبـل 🙂😂.")
+elseif Text== "اشكرك" then return sendMsg(msg.chat_id_,msg.id_,"تـدلـل يـحـبي 💕.")
+elseif Text== "ايديي" or Text=="ايدي" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data) end
 USERNAME = USERNAME:gsub([[\_]],"_")
 USERCAR = utf8.len(USERNAME) 
-SendMention(msg.chat_id_,data.id_,msg.id_,"🧟‍♂¦ آضـغط على آلآيدي ليتم آلنسـخ\n\n "..USERNAME.." ~⪼ ( "..data.id_.." )",37,USERCAR)  
+SendMention(msg.chat_id_,data.id_,msg.id_,"- اضـغط على الايدي ليتم النسـخ\n\n "..USERNAME.." ~⪼ ( "..data.id_.." )",37,USERCAR)  
 return false
 end)
 elseif Text=="اريد رابط الحذف" or Text=="اريد رابط حذف" or Text=="رابط حذف" or Text=="رابط الحذف" then
 return sendMsg(msg.chat_id_,msg.id_,[[
-🌿¦ رابط حذف حـساب التيليجرام ↯
-📛¦ فكر قبل تندم/لايمكن العوده 
-📛¦ سيتم حذف الحساب كاملاً 
-👨🏽‍⚖️¦ إذا صامل بالتوفيق عزيزي ..
-https://telegram.org/deactivate
-
- 🇸🇦
+- رابط حذف حـساب التيليكرام ↯
+- لتتندم فڪر قبل ڪلشي  
+- بالتـوفيـق عزيزي ...
+-ـ  https://telegram.org/deactivate
 ]] )
 elseif Text== "انجب" or Text== "نجب" or Text=="جب" then
 if msg.SudoUser then  
@@ -6681,6 +6835,7 @@ Boss = {
 "^(المطورين)$",
 "^(تيست)$",
 "^(test)$",
+"^(قناة السورس)$",
 "^(الاحصائيات)$",
 "^(اضف رد عام)$",
 "^(مسح الردود)$",
@@ -6691,6 +6846,8 @@ Boss = {
 "^(الردود)$",
 "^(الردود العامه)$",
 "^(اضف رد)$",
+"^(/UpdateSource)$",
+"^(تحديث السورس)$",
 "^(تنظيف المجموعات)$",
 "^(تنظيف المشتركين)$",
 "^(رتبتي)$",
@@ -6706,6 +6863,7 @@ Boss = {
 "^(التاريخ)$",
 "^(متجر الملفات)$",
 "^(الملفات)$",
+"^(اصدار السورس)$",
 "^(الاصدار)$",
 "^(server)$",
 "^(تعيين امر)$",
@@ -6743,6 +6901,8 @@ Boss = {
 "^(مسح الايدي عام)$", 
 "^(مسح ايدي عام)$", 
 "^(مسح كليشة الايدي عام)$", 
+"^(السورس)$",
+"^(سورس)$",
 "^(م المطور)$", 
 "^(اوامر الرد)$",
 "^(اوامر الملفات)$",
