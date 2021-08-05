@@ -1201,6 +1201,34 @@ return sendMsg(msg.chat_id_,msg.id_,"🔓¦ تم فتح المتحركه بنج�
 end
 end,{msg=msg})
 end
+---------------Mute Game-------------------
+function mute_game(msg) 
+if not msg.Admin then return "📪¦ هذا الامر يخص الادمنيه فقط  " end
+GetUserID(msg.sender_user_id_,function(arg,data)
+msg = arg.msg 
+local NameUser   = Hyper_Link_Name(data)
+if redis:get(boss.."mute_game"..msg.chat_id_) then
+return sendMsg(msg.chat_id_,msg.id_,"🔒¦ تم بالتأكيد قفل الالعاب    \n📮¦ بواسطه ⋙「 "..NameUser.." 」 " ) 
+else
+redis:set("mute_game"..msg.chat_id_,true)
+return sendMsg(msg.chat_id_,msg.id_,"🔒¦ تم قفل الالعاب بنجاح   \n📮¦ بواسطه ⋙「 "..NameUser.." 」 " ) 
+end
+end,{msg=msg})
+end
+
+function unmute_game(msg)
+if not msg.Admin then return "📪¦ هذا الامر يخص الادمنيه فقط  " end
+GetUserID(msg.sender_user_id_,function(arg,data)
+msg = arg.msg 
+local NameUser   = Hyper_Link_Name(data)
+if not redis:get(boss.."mute_game"..msg.chat_id_) then
+return sendMsg(msg.chat_id_,msg.id_,"🔓¦ تم بالتأكيد فتح الالعاب    \n📮¦ بواسطه ⋙「 "..NameUser.." 」 " ) 
+else 
+redis:del(boss.."mute_game"..msg.chat_id_)
+return sendMsg(msg.chat_id_,msg.id_,"🔓¦ تم فتح الالعاب بنجاح   \n📮¦ بواسطه ⋙「 "..NameUser.." 」 " ) 
+end
+end,{msg=msg})
+end
 ---------------Mute Inline-------------------
 function mute_inline(msg) 
 if not msg.Admin then return "📪¦ هذا الامر يخص الادمنيه فقط  " end

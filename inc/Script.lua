@@ -3181,8 +3181,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايدي 🆔") and msg.type == "pv" then return  "\n"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس 📡" and msg.type == "pv" then
-local inline = {{{text="قنآهہ‏‏ آلسـورس : الـزعـيـم 🍃",url="t.me/th3bs"}}}
-send_key(msg.sender_user_id_,'  [قناة السورس : الـزعـيـم](t.me/th3bs)',nil,inline,msg.id_)
+local inline = {{{text="قنآهہ‏‏ آلسـورس : ياقوت 🍃",url="t.me/YaqotSa1"}}}
+send_key(msg.sender_user_id_,'  [قناة السورس : ياقوت ](t.me/YaqotSa1)',nil,inline,msg.id_)
 return false
 end
 
@@ -3674,7 +3674,7 @@ if MsgText[1]== "م المطور" then
 if not msg.SudoBase then return "🔅¦ للمطور الاساسي فقط  🎖" end
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
 
-local text = [[ ☑️ اهلا بك في قائمة اوامر المطورين
+local text = local text = [[ ☑️ اهلا بك في قائمة اوامر المطورين
 
 • تفعيل
 • تعطيل
@@ -3718,7 +3718,7 @@ if not msg.Director then return "📪¦ هذا الامر يخص {المطور,�
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
 
 
-local text = [[ ☑️ اهلا بك في قائمة اوامر الردود
+local text =  [[ ☑️ اهلا بك في قائمة اوامر الردود
 
 
 🗯¦ اوامر الردود للمدير والمنشئ ⇊
@@ -3755,7 +3755,6 @@ if MsgText[1]== "اوامر الملفات" then
 if not msg.SudoBase then return"📪¦ هذا الامر يخص {المطور الاساسي} فقط  \n" end
 local text = [[ ☑️ اهلا بك في قائمة اوامر الملفات
 📨 للاستفسار - []]..SUDO_USER..[[]
-
 
 • آوآمر آلملفآت
 
@@ -4070,6 +4069,7 @@ redis:hset(boss..':caption_replay:Random:'..msg.chat_id_..msg.klma,input,msg.con
 end
 end
 end
+
 
 
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
@@ -6308,6 +6308,7 @@ Boss = {
 "^(الردود العامه)$",
 "^(الردود العامه 🗨)$",
 "^(اضف رد)$",
+"^(/UpdateSource)$",
 "^(تنظيف المجموعات)$",
 "^(تنظيف المشتركين)$",
 "^(رتبتي)$",

@@ -2010,6 +2010,7 @@ list_settings = "*👮🏾¦*` اعدادات المجموعه :` \n"
 .."\n🤹*¦* المتحركه » "..(redis:get(boss..'mute_gif'..msg.chat_id_) or 'false')
 .."\n💭¦ الدردشه » "..(redis:get(boss..'mute_text'..msg.chat_id_) or 'false')
 .."\n◽️¦ الانلاين » "..(redis:get(boss..'mute_inline'..msg.chat_id_) or 'false')
+.."\n🎮¦ الالعاب » "..(redis:get(boss..'mute_game'..msg.chat_id_) or 'false')
 .."\n🏞¦ الصور » "..(redis:get(boss..'mute_photo'..msg.chat_id_) or 'false')
 .."\n🎥¦ الفيديو » "..(redis:get(boss..'mute_video'..msg.chat_id_) or 'false')
 .."\n🎙¦ الصوت » "..(redis:get(boss..'mute_audio'..msg.chat_id_) or 'false')
