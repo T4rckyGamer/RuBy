@@ -1,15 +1,7 @@
 --[[
-#    ▀█████████▄   ▄██████▄     ▄████████    ▄████████
-#      ███    ███ ███    ███   ███    ███   ███    ███
-#      ███    ███ ███    ███   ███    █▀    ███    █▀
-#     ▄███▄▄▄██▀  ███    ███   ███          ███
-#    ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS
-#      ███    ██▄ ███    ███          ███          ███ ¦ Dev : @OMMMM
-#      ███    ███ ███    ███    ▄█    ███    ▄█    ███
-#    ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS
+BY @Q11111
 #---------------------------------------------------------------------
 ]]
-
 
 function dl_cb(a,d)  end
 
@@ -418,10 +410,8 @@ local UrlInfo = https.request(ApiToken..'/getfile?file_id='..FileID)
 return ApiToken..'/'..JSON.decode(UrlInfo).result.file_path
 end 
 
-----------------------{ End Api Token Bot }-----------------------------
-
 ----------------------{ Get Name Bot }-----------------------------
-Bot_Name = redis:get(boss..":NameBot:") or "ياقوت"
+Bot_Name = redis:get(boss..":NameBot:") or "الزعيم"
 
 
 function GetType(ChatID) 
@@ -484,10 +474,10 @@ Name = data.first_name_ .." "..data.last_name_
 else 
 Name = data.first_name_ 
 end
-usernn = data.username_ or "th3bs"
+usernn = data.username_ or "wViiVw"
 else 
 Name = data.title_
-usernn = data.type_.user_.username_ or "th3bs"
+usernn = data.type_.user_.username_ or "wViiVw"
 end
 Name = Name:gsub('[[][]]','')
 Name = FlterName(Name,10)
@@ -785,7 +775,7 @@ function Getrtba(UserID,ChatID)
 if UserID == our_id then 
 var = 'هذا البوت' 
 elseif UserID == 909279851 or UserID == 909279851  then 
-var = 'مطور الاساسي' 
+var = 'مطور البوت'
 elseif  UserID == SUDO_ID then
 var = redis:get(boss..":RtbaNew1:"..ChatID) or 'مطور اساسي 👨🏻‍✈️' 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then
@@ -885,7 +875,7 @@ local info  = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/TH3bs) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/wViiVw) \n'
 end
 
 i=i+1
@@ -897,7 +887,7 @@ local info  = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/TH3bs) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/wViiVw) \n'
 end
 i=i+1
 end 
@@ -908,7 +898,7 @@ local info  = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/TH3bs) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/wViiVw) \n'
 end
 i=i+1
 end 
@@ -919,7 +909,7 @@ local info  = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/TH3bs) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/wViiVw) \n'
 end
 i=i+1
 end 
@@ -931,7 +921,7 @@ local info  = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..i.."-l ["..info.username..'] \n'
 else
-message = message ..i.. '-l ['..info.username..'](t.me/TH3bs) \n'
+message = message ..i.. '-l ['..info.username..'](t.me/wViiVw) \n'
 end
 i=i+1
 end 
@@ -950,7 +940,7 @@ local count = redis:scard(boss..'mtwr_count'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`){'..count..'} \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`){'..count..'} \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`){'..count..'} \n'
 end
 end 
 end
@@ -976,7 +966,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -991,7 +981,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.."-l ["..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1010,7 +1000,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..(info.username or '')..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 end
@@ -1032,7 +1022,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1053,7 +1043,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1083,7 +1073,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end
 if utf8.len(message) > 4096 then
@@ -1114,7 +1104,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end 
 end 
 if utf8.len(message) > 4096 then
@@ -1144,7 +1134,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-l ['..info.username..'] » (`' ..v.. '`) \n'
 else
-message = message ..k.. '-l ['..info.username..'](t.me/TH3bs) l » (`' ..v.. '`) \n'
+message = message ..k.. '-l ['..info.username..'](t.me/wViiVw) l » (`' ..v.. '`) \n'
 end
 end 
 if utf8.len(message) > 4096 then
@@ -1585,7 +1575,7 @@ return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك طرد البوت\n🛠")
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك طرد المطور الاساسي\n🛠") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك طرد مطور الاساسي\n🛠") 
+return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك طرد مطور البوت\n🛠") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك طرد المطور\n🛠") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
@@ -1722,7 +1712,7 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠") 
+return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك حظر مطور البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1751,7 +1741,7 @@ if cmd == "kick" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك طرد البوت\n🛠") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك طرد مطور السورس\n🛠") 
+return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك طرد مطور البوت\n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك طرد المطور الاساسي\n🛠") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1794,7 +1784,7 @@ if cmd == "ktm" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك كتم البوت\n🛠") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك كتم مطور السورس\n🛠") 
+return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك كتم مطور البوت \n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك كتم المطور الاساسي\n🛠") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1853,7 +1843,7 @@ if cmd == "bandall" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك حظر البوت\n🛠") 
 elseif UserID == 909279851 or UserID == 909279851 then 
-return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك حظر مطور السورس\n🛠") 
+return sendMsg(ChatID,MsgID,"⚜️*¦* لا يمكنك حظر مطور البوت \n🛠") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"👤*¦* لا يمكنك حظر المطور الاساسي\n🛠")
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
@@ -1899,7 +1889,7 @@ end
 if cmd == "DwnAll" then ----------- تنزيل الكل
 print(UserID..":"..SUDO_ID)
 if UserID == our_id then return sendMsg(ChatID,MsgID,"📛*¦* لآ يمكنك تنفيذ الامر مع البوت\n❕") end
-if UserID == 909279851 or UserID == 909279851 then return sendMsg(ChatID,MsgID,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور السورس \n❕") end
+if UserID == 909279851 or UserID == 909279851 then return sendMsg(ChatID,MsgID,"📛*¦* لآ يمكنك تنفيذ الامر ضد مطور البوت \n❕") end
 
 if UserID == SUDO_ID then 
 rinkuser = 1
